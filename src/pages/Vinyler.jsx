@@ -166,7 +166,7 @@ function Vinyler() {
 export default Vinyler;
  */
 
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { VinylDataContext } from "../components/VinylDataContext";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";

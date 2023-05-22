@@ -1,4 +1,3 @@
-import React from "react";
 import logoSort from "../assets/svg/logo_sort.svg";
 import SogeFelt from "./SogeFelt";
 import { useState, useEffect } from "react";

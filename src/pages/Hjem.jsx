@@ -1,6 +1,6 @@
-import React from "react";
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
+import UdvalgteKategorier from "../components/UdvalgteKategorier";
 function Hjem() {
   const navigate = useNavigate();
   function goToVinyler() {
@@ -29,6 +29,9 @@ function Hjem() {
             ></Button>
           </div>
         </div>
+      </section>
+      <section className="udvalgte-kategorier">
+        <UdvalgteKategorier></UdvalgteKategorier>
       </section>
     </>
   );
