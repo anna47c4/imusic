@@ -1,18 +1,19 @@
 @import "partials/variables";
 .footer-wrapper {
-  height: 1300px;
+  /*   height: 1300px; */
+  height: fit-content;
   background-color: $coal;
+  margin-bottom: 0;
+  padding-bottom: 20px;
   footer {
     margin: 0px 30px 0px 30px;
-    p {
-      color: $bloodorange;
-    }
 
     .information {
       margin-bottom: 50px;
       p {
         color: $offwhite;
         font-size: $font-s-p;
+        line-height: normal;
       }
 
       .heading {

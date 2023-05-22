@@ -11,7 +11,7 @@ body {
 }
 main {
   max-width: 1240px;
-
+  margin: auto;
   padding: 0;
 }
 
@@ -20,6 +20,9 @@ a {
 }
 button {
   border: none;
+}
+p {
+  line-height: 24px;
 }
 /* @media (min-width: 762px) {
   main {
@@ -31,12 +34,25 @@ button {
 .hero-section {
   margin: 0;
   padding: 0;
-  width: 100vw;
+  max-width: 100%;
   height: 800px;
   background-color: $coal;
+  background-image: url("../assets/svg/soundwave_1920X1080.svg");
+  background-size: cover;
+  background-repeat: none;
+
+  .top-img {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    img {
+      width: 50%;
+    }
+  }
 
   .hero-txt {
-    padding: 30px;
+    margin: 50px;
+
     h1 {
       font-size: $font-s-h1-mob;
       color: $offwhite;
@@ -56,7 +72,7 @@ button {
 //section 2 - udvalgte kategorier
 .udvalgte-kategorier {
   margin: 25px;
-
+  margin-bottom: 50px;
   .heading {
     margin: 25px;
     h2 {
@@ -122,16 +138,45 @@ button {
   }
 }
 /* APPETIZER SECTIONS */
+/* .appetizer1 {
+  background-image: url("../assets/img/soundwave_kvadratisk_1.webp");
+  background-size: cover;
+} */
+.store-img {
+  background-color: $coal;
+  img {
+    width: 100%;
+  }
+}
+.store-txt-wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.background1 {
+  background-color: $coal;
+  background-image: url("../assets/svg/soundwave_1920X1080.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.background2 {
+  background-color: $coal;
+  background-image: url("../assets/svg/soundwave_reversed.svg");
+  background-size: cover;
+  background-position: center;
+}
 .store-txt {
   margin: 50px;
+  color: $offwhite;
 }
 
 /* HVORFOR HANDLE HER - SECTION */
 .shop-here {
   background-color: $softsmoke;
   margin: 0;
-  width: 100vw;
+  /*   width: 100vw; */
   padding-bottom: 50px;
+  margin-bottom: 50px;
   h3 {
     padding-top: 50px;
     margin: 50px;
@@ -173,6 +218,7 @@ button {
 .ico-wrapper {
   display: flex;
   justify-content: center;
+  padding-top: 8px;
   img {
     width: 70px;
     height: 70px;
@@ -188,3 +234,9 @@ button {
     }
   }
 }
+/* @media (min-width: 762px) {
+  .herosection {
+
+  }
+}
+ */

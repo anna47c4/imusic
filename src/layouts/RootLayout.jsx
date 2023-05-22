@@ -126,9 +126,8 @@ function RootLayout() {
           )}
           <Breadcrumbs></Breadcrumbs>
         </header>
-        <main>
-          <Outlet></Outlet>
-        </main>
+
+        <Outlet></Outlet>
       </div>
       <Footer></Footer>
     </>

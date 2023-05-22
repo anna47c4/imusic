@@ -124,10 +124,10 @@ import { NavLink } from  */ "react-router-dom";
 
 /* export default Nav; */
 
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
-function Nav({ vinylData }) {
+function Nav() {
   //herunder har vi vores state der styrer om vores submenu / dropdown menu er åben eller lukket
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   //herunder har vi to variabler vi bruger til at holde øje aktiviteten omkring submenuen
@@ -173,7 +173,8 @@ function Nav({ vinylData }) {
         </NavLink> */}
         <div
           className={`submenu-trigger ${isSubMenuOpen ? "active" : ""}`}
-          activeclassnamee="active"
+          // eslint-disable-next-line react/no-unknown-property
+          activeclassname="active"
           onMouseEnter={handleSubMenuOpen}
           onMouseLeave={handleSubMenuClose}
           onTouchStart={handleSubMenuOpen}
@@ -200,6 +201,7 @@ function Nav({ vinylData }) {
             </li>
             <li>
               <NavLink to="/produkter/cder" activeclassname="active">
+                {/*     eslint-disable-next-line react/no-unescaped-entities */}
                 Cd'er
               </NavLink>
             </li>

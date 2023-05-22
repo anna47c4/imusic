@@ -2,6 +2,7 @@ import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
 import UdvalgteKategorier from "../components/UdvalgteKategorier";
 import flueBen from "../assets/svg/flueben.svg";
+import farvedeVinyler from "../assets/img/vinyler.webp";
 import AppetizerOne from "../components/AppetizerOne";
 import AppetizerTwo from "../components/AppetizerTwo";
 function Hjem() {
@@ -13,7 +14,13 @@ function Hjem() {
   return (
     <>
       <section className="hero-section">
-        <div className="top-img">{/*           <img src={} alt="" /> */}</div>
+        <div className="top-img">
+          <img
+            src={farvedeVinyler}
+            alt="Farvede vinyler fra Imusic"
+            className="farvede-vinyler"
+          />
+        </div>
         <div className="hero-txt hero-btn">
           <h1>
             Vil du have fingrene i en 15% kampagnekode til vinyler hos imusic?
@@ -33,64 +40,66 @@ function Hjem() {
           </div>
         </div>
       </section>
-      <section className="udvalgte-kategorier">
-        <UdvalgteKategorier></UdvalgteKategorier>
-      </section>
-      <section className="appetizer1">
-        <AppetizerOne></AppetizerOne>
-      </section>
+      <main>
+        <section className="udvalgte-kategorier">
+          <UdvalgteKategorier></UdvalgteKategorier>
+        </section>
+        <section className="appetizer1">
+          <AppetizerOne></AppetizerOne>
+        </section>
 
-      <section className="appetizer2">
-        <AppetizerTwo></AppetizerTwo>
-      </section>
-      <section className="shop-here">
-        <h3>Hvorfor handle her?</h3>
-        <div className="shop-card-wrapper">
-          <div className="shop-card">
-            <div className="ico-wrapper">
-              <img src={flueBen} alt="flueben i cirkel" />
+        <section className="appetizer2">
+          <AppetizerTwo></AppetizerTwo>
+        </section>
+        <section className="shop-here">
+          <h3>Hvorfor handle her?</h3>
+          <div className="shop-card-wrapper">
+            <div className="shop-card">
+              <div className="ico-wrapper">
+                <img src={flueBen} alt="flueben i cirkel" />
+              </div>
+              <h4>Nordens største udvalg</h4>
+              <p>
+                iMusic er Nordens største musikforhandler med 7.340.000 titler
+                til lave priser · Kæmpe udvalg af nyt og kommende materiale
+              </p>
             </div>
-            <h4>Nordens største udvalg</h4>
-            <p>
-              iMusic er Nordens største musikforhandler med 7.340.000 titler til
-              lave priser · Kæmpe udvalg af nyt og kommende materiale
-            </p>
-          </div>
 
-          <div className="shop-card">
-            <div className="ico-wrapper">
-              <img src={flueBen} alt="flueben i cirkel" />
+            <div className="shop-card">
+              <div className="ico-wrapper">
+                <img src={flueBen} alt="flueben i cirkel" />
+              </div>
+              <h4>Fri fragt v. DKK 699,00</h4>
+              <p>
+                Få gratis fragt til pakkeshop ved køb for DKK 699,00 (i
+                Danmark). Gælder ikke ved køb af gavekort.
+              </p>
             </div>
-            <h4>Fri fragt v. DKK 699,00</h4>
-            <p>
-              Få gratis fragt til pakkeshop ved køb for DKK 699,00 (i Danmark).
-              Gælder ikke ved køb af gavekort.
-            </p>
-          </div>
 
-          <div className="shop-card">
-            <div className="ico-wrapper">
-              <img src={flueBen} alt="flueben i cirkel" />
+            <div className="shop-card">
+              <div className="ico-wrapper">
+                <img src={flueBen} alt="flueben i cirkel" />
+              </div>
+              <h4>Godkendt</h4>
+              <p>
+                Topvurdering på Trustpilot og Google-anmeddelser. Medlem af
+                Dansk Erhverv - Digital Handel.
+              </p>
             </div>
-            <h4>Godkendt</h4>
-            <p>
-              Topvurdering på Trustpilot og Google-anmeddelser. Medlem af Dansk
-              Erhverv - Digital Handel.
-            </p>
-          </div>
 
-          <div className="shop-card">
-            <div className="ico-wrapper">
-              <img src={flueBen} alt="flueben i cirkel" />
+            <div className="shop-card">
+              <div className="ico-wrapper">
+                <img src={flueBen} alt="flueben i cirkel" />
+              </div>
+              <h4>God service</h4>
+              <p>
+                Personlig kundeservice, der er til at tale med. Hurtig
+                responstid, vores kunder er vores første prioritet.
+              </p>
             </div>
-            <h4>God service</h4>
-            <p>
-              Personlig kundeservice, der er til at tale med. Hurtig responstid,
-              vores kunder er vores første prioritet.
-            </p>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </>
   );
 }
