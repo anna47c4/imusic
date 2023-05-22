@@ -1,0 +1,97 @@
+@import "partials/variables";
+
+/* VINYL SIDE */
+.vinyl-wrapper {
+  /*   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-items: baseline;
+  gap: 8px;
+  justify-content: center; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.vinyl {
+  flex: 1 0 250px;
+  background-color: $softsmoke;
+  padding: 20px;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
+  /*   height: 100%; */
+  display: flex; /* Tilføj denne linje */
+  flex-direction: column; /* Tilføj denne linje */
+
+  p.kunstner,
+  p.titel {
+    padding-bottom: 6px;
+    margin: 0;
+    font-size: $font-s-h4-mob;
+    color: $coal;
+  }
+  .pris-wrapper {
+    /*     display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin-top: auto;
+    display: flex;
+    .pris {
+      font-size: $font-s-p;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+.img-wrapper {
+  .produkt-img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
+.tags {
+  p {
+    font-size: $font-s-lille-product-banner-txt;
+  }
+}
+
+.tag-wrapper {
+  display: flex;
+  justify-content: end;
+  gap: 4px;
+  .edition-p {
+    background-color: $mintgreen;
+    padding: 6px;
+  }
+  .nyhed-p {
+    background-color: $beachyellow;
+    padding: 6px;
+  }
+  .lagerstatus-p {
+    background-color: $skyblue;
+    padding: 6px;
+  }
+  .lav-lagerstatus-p {
+    background-color: $warninggold;
+    padding: 6px;
+
+    svg {
+      width: 7px;
+      height: 7px;
+    }
+  }
+}
+.notag {
+  .notag-p {
+    background-color: transparent;
+    color: transparent;
+    padding: 6px;
+  }
+}
+
+/* .top-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; // Tilføjet denne linje for at centrere vertikalt
+} */
+.btn-wrapper {
+  margin-top: auto;
+  display: flex;
+}

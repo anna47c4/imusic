@@ -1,0 +1,53 @@
+@import "partials/variables";
+//GENERAL STYLING//
+:root {
+  font-size: 16px;
+  font-family: $font-family;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $offwhite;
+}
+main {
+  max-width: 1240px;
+
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+}
+/* @media (min-width: 762px) {
+  main {
+
+  }
+} */
+/* LANDINGPAGE STYLING */
+.hero-section {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 800px;
+  background-color: $coal;
+
+  .hero-txt {
+    padding: 30px;
+    h1 {
+      font-size: $font-s-h1-mob;
+      color: $offwhite;
+    }
+    p {
+      font-size: $font-s-p;
+      color: $offwhite;
+    }
+  }
+
+  .cta-btn-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}

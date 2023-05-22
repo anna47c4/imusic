@@ -1,0 +1,19 @@
+@import "partials/variables";
+//den blå 'køb her' knap på produkterne
+.buybtn {
+  background-color: $steelblue;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
+  width: 100px;
+  height: 31px;
+  color: $offwhite;
+  font-size: $font-s-btn-txt;
+  text-transform: uppercase;
+}
+
+.cta-btn {
+  width: 140px;
+  height: 36px;
+  background-color: $bloodorange;
+  color: $coal;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
+}
