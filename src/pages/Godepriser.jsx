@@ -1,5 +1,6 @@
 import Button from "../components/Button";
 import FastLavPris from "../components/FastLavPris";
+/* import tilbudBg1 from "../assets/img/tilbudbaggrund1.webp" */
 import { useNavigate } from "react-router-dom";
 function Godepriser() {
   const navigate = useNavigate();
@@ -16,39 +17,44 @@ function Godepriser() {
             køb hos imusic
           </h1>
           <p>
-            Brug kampagnekoden ‘IMUSIC15’ ved check-ud. Psssst for resten vi er
-            ikke færdige... Lige nu har vi en konkurrence på vores instagram
-            imusicdk. Klik ind og deltag du har mulighed for at vinde et
-            gavekort på 1000 dkk, som kan bruges på hele imusic.dk.
+            Brug kampagnekoden ‘IMUSIC15’ ved check-ud. Psssst, forresten vi er
+            ikke færdige... Lige nu har vi en konkurrence på vores Instagram{" "}
+            <em>imusicdk.</em> Klik ind og deltag du har mulighed for at vinde
+            et gavekort på 1000 dkk, som kan bruges på hele imusic.dk.
           </p>
           <div className="cta-btn-wrapper">
             <Button
               className={"cta-btn"}
               clickAction={goToVinyler}
-              desc={"VINYLER"}
+              desc={"DELTAG"}
             ></Button>
           </div>
         </div>
       </section>
-      <section className="tilbud">
-        <div className="txt">
-          <h2>Tilbud lige nu</h2>
-          <p>
-            Gør et kup, tilbuddene gælder i en begrænset periode. Så skynd dig!
-          </p>
-        </div>
-        <div className="vinyl-tilbud">
-          <h3>GODE TILBUD PÅ VINYLER LIGE NU!</h3>
-          <Button className={"cat-btn"} desc={"TJEK TILBUD"}></Button>
-        </div>
-        <div className="kpop-tilbud">
-          <h3>GODE TILBUD PÅ K-POPLIGE NU!</h3>
-          <Button className={"cat-btn"} desc={"TJEK TILBUD"}></Button>
-        </div>
-      </section>
-      <section className="fast-lav-pris">
-        <FastLavPris></FastLavPris>
-      </section>
+      <main>
+        <section className="tilbud">
+          <div className="txt">
+            <h2>Tilbud lige nu</h2>
+            <p>
+              Gør et kup - tilbuddene gælder i en begrænset periode. Så skynd
+              dig!
+            </p>
+          </div>
+          <div className="tilbud-wrapper">
+            <div className="vinyl-tilbud">
+              <h3>GODE TILBUD PÅ VINYLER LIGE NU!</h3>
+              <Button className={"cat-btn"} desc={"TJEK TILBUD"}></Button>
+            </div>
+            <div className="kpop-tilbud">
+              <h3>GODE TILBUD PÅ K-POP LIGE NU!</h3>
+              <Button className={"cat-btn"} desc={"TJEK TILBUD"}></Button>
+            </div>
+          </div>
+        </section>
+        <section className="fast-lav-pris">
+          <FastLavPris></FastLavPris>
+        </section>
+      </main>
     </>
   );
 }

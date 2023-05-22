@@ -20,6 +20,8 @@ a {
 }
 button {
   border: none;
+  font-size: $font-s-btn-txt;
+  font-family: $font-family;
 }
 p {
   line-height: 24px;
@@ -75,6 +77,9 @@ p {
   .cta-btn-wrapper {
     display: flex;
     justify-content: center;
+    @media (min-width: 762px) {
+      justify-content: flex-start;
+    }
   }
 }
 
@@ -117,7 +122,7 @@ p {
       flex-direction: column; /* Tilføj denne linje */
       align-items: center;
       justify-content: center;
-      background-image: url(../assets/svg/imusicpattern.svg);
+      /*      background-image: url(../assets/svg/imusicpattern.svg); */
 
       .img-wrapper {
         display: flex;
@@ -319,6 +324,84 @@ form {
 }
 
 /* GODE PRISER PAGE */
+.gode-priser-hero {
+  background-image: url(../assets/svg/soundwave_1920X1080.svg);
+  background-size: cover;
+  background-position: center;
+  .hero-txt {
+    color: $offwhite;
+    margin: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    h1 {
+      font-size: $font-s-h1-mob;
+      line-height: 31px;
+    }
+
+    .cta-btn-wrapper {
+      display: flex;
+      justify-content: center;
+      padding-top: 25px;
+      @media (min-width: 762px) {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+.tilbud {
+  background-color: $softsmoke;
+
+  .txt {
+    padding-top: 50px;
+    margin: 25px;
+  }
+  .tilbud-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 25px;
+    padding-bottom: 50px;
+
+    .vinyl-tilbud {
+      background-image: url(../assets/img/tilbudbaggrund1.webp);
+      background-size: cover;
+      background-position: center;
+      flex: 1 0 300px;
+      display: flex; /* Tilføj denne linje */
+      flex-direction: column; /* Tilføj denne linje */
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      color: $offwhite;
+      padding: 30px;
+      button {
+        color: $offwhite;
+      }
+      @media (min-width: 762px) {
+        padding: 60px;
+      }
+    }
+
+    .kpop-tilbud {
+      background-image: url(../assets/img/tilbudbaggrund2.webp);
+      background-size: cover;
+      background-position: center;
+      flex: 1 0 300px;
+      display: flex; /* Tilføj denne linje */
+      flex-direction: column; /* Tilføj denne linje */
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      color: $offwhite;
+      color: $offwhite;
+      padding: 30px;
+      button {
+        color: $offwhite;
+      }
+    }
+  }
+}
 .fast-lav-pris {
   /*  .heading {
   } */
