@@ -1,7 +1,7 @@
-import bog from "../assets/svg/bog.svg";
-import film from "../assets/svg/film.svg";
-import cd from "../assets/svg/cd.svg";
-import vinyl from "../assets/svg/vinyl.svg";
+import bogFastPris from "../assets/svg/lilleBogFastPris.svg";
+import filmFastPris from "../assets/svg/lilleFilmFastPris.svg";
+import cdFastPris from "../assets/svg/lilleCdFastPris.svg";
+import vinylFastPris from "../assets/svg/lilleVinylFastPris.svg";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 function UdvalgteKategorier() {
@@ -20,19 +20,12 @@ function UdvalgteKategorier() {
   }
   return (
     <>
-      <div className="heading">
-        <h2>Se udvalgte kategorier</h2>
-        <p>Nordens største udvalg af musik, film og bøger</p>
-      </div>
       <div className="cat-wrapper">
         <div className="vinyl-cat cat">
-          <div className="img-wrapper">
-            <img
-              src={vinyl}
-              alt="Vinyl ikon der symboliserer fast lav pris på vinyler"
-            />
-          </div>
-
+          <img
+            src={vinylFastPris}
+            alt="Vinyl ikon der symboliserer fast lav pris på vinyler"
+          />
           <div className="btn-wrapper">
             <Button
               className={"cat-btn"}
@@ -42,13 +35,10 @@ function UdvalgteKategorier() {
           </div>
         </div>
         <div className="cd-cat cat">
-          <div className="img-wrapper">
-            <img
-              src={cd}
-              alt="CD ikon der symboliserer fast lav pris på CD'er"
-            />
-          </div>
-
+          <img
+            src={cdFastPris}
+            alt="CD ikon der symboliserer fast lav pris på CD'er"
+          />
           <div className="btn-wrapper">
             <Button
               className={"cat-btn"}
@@ -58,14 +48,10 @@ function UdvalgteKategorier() {
           </div>
         </div>
         <div className="film-cat cat">
-          <div className="img-wrapper">
-            <img
-              src={film}
-              alt="Film ikon der symboliserer fast lav pris på Film"
-              className="film"
-            />
-          </div>
-
+          <img
+            src={filmFastPris}
+            alt="Film ikon der symboliserer fast lav pris på Film"
+          />
           <div className="btn-wrapper">
             <Button
               className={"cat-btn"}
@@ -75,14 +61,10 @@ function UdvalgteKategorier() {
           </div>
         </div>
         <div className="bog-cat cat">
-          <div className="img-wrapper">
-            <img
-              src={bog}
-              alt="Bog ikon der symboliserer fast lav pris på Bøger"
-              className="bog"
-            />
-          </div>
-
+          <img
+            src={bogFastPris}
+            alt="Bog ikon der symboliserer fast lav pris på Bøger"
+          />
           <div className="btn-wrapper">
             <Button
               className={"cat-btn"}

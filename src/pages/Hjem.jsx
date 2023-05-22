@@ -4,7 +4,7 @@ import UdvalgteKategorier from "../components/UdvalgteKategorier";
 function Hjem() {
   const navigate = useNavigate();
   function goToVinyler() {
-    navigate("/");
+    navigate("../produkter/vinyler");
   }
 
   return (
@@ -32,6 +32,26 @@ function Hjem() {
       </section>
       <section className="udvalgte-kategorier">
         <UdvalgteKategorier></UdvalgteKategorier>
+      </section>
+      <section className="appetizer">
+        <div className="store-img">{/*           <img src="" alt="" /> */}</div>
+        <div className="store-txt">
+          <h3>
+            Med over 300.000 vinyler i vores udvalg har vi helt sikkert noget,
+            der vil begejstre din musiksmag
+          </h3>
+          <p>
+            Se vores brede udvalg af vinyler. Vi har alt hvad hjertet begærer
+            til din samling.
+          </p>
+          <div className="store-btn">
+            <Button
+              className={"cta-btn"}
+              desc={"VINYLER"}
+              clickAction={goToVinyler}
+            ></Button>
+          </div>
+        </div>
       </section>
     </>
   );

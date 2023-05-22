@@ -27,6 +27,7 @@ button {
   }
 } */
 /* LANDINGPAGE STYLING */
+//herosection
 .hero-section {
   margin: 0;
   padding: 0;
@@ -49,5 +50,66 @@ button {
   .cta-btn-wrapper {
     display: flex;
     justify-content: center;
+  }
+}
+
+//section 2 - udvalgte kategorier
+.udvalgte-kategorier {
+  margin: 25px;
+
+  .heading {
+    h2 {
+      font-size: $font-s-h2-mob;
+      color: $coal;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: $font-s-p;
+    }
+  }
+  .cat-wrapper {
+    /*     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+
+    .cat {
+      flex: 1 0 200px;
+      background-color: $softsmoke;
+      padding: 20px;
+      display: flex; /* Tilføj denne linje */
+      flex-direction: column; /* Tilføj denne linje */
+      align-items: center;
+      justify-content: center;
+      background-image: url(../assets/svg/imusicpattern.svg);
+
+      .img-wrapper {
+        display: flex;
+        flex-direction: column; /* Tilføj denne linje */
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20px;
+        /*      display: flex;
+        align-items: baseline; */
+        img {
+          width: 40%;
+          object-fit: contain;
+        }
+
+        .film {
+          width: 35%;
+        }
+        .bog {
+          padding-top: 22px;
+        }
+      }
+    }
+
+    .btn-wrapper {
+      margin-top: auto;
+      display: flex;
+    }
   }
 }
