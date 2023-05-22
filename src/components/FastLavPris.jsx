@@ -20,6 +20,13 @@ function UdvalgteKategorier() {
   }
   return (
     <>
+      <div className="heading">
+        <h2>Fast lav pris</h2>
+        <p>
+          Fordelagtige faste lave priser, der er tilgængelige året rundt. Tag et
+          kig i vores store udvalg!
+        </p>
+      </div>
       <div className="cat-wrapper">
         <div className="vinyl-cat cat">
           <img

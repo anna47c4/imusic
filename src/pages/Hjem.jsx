@@ -1,11 +1,15 @@
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import UdvalgteKategorier from "../components/UdvalgteKategorier";
 import flueBen from "../assets/svg/flueben.svg";
 import farvedeVinyler from "../assets/img/vinyler.webp";
 import AppetizerOne from "../components/AppetizerOne";
 import AppetizerTwo from "../components/AppetizerTwo";
 function Hjem() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const navigate = useNavigate();
   function goToVinyler() {
     navigate("../produkter/vinyler");

@@ -172,6 +172,9 @@ import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 
 function Vinyler() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const vinylData = useContext(VinylDataContext);
   const [filteredVinyls, setFilteredVinyls] = useState([]);
 

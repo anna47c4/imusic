@@ -276,6 +276,7 @@ p {
   }
 }
  */
+/* GIFT CARD PAGE */
 .gift-card-form {
   display: flex;
   flex-direction: column;
@@ -292,7 +293,6 @@ p {
     color: $offwhite;
   }
 }
-
 form {
   display: flex;
   flex-direction: column;
@@ -314,6 +314,34 @@ form {
       border: 1px solid #ccc;
       border-radius: 4px;
       width: 200px;
+    }
+  }
+}
+
+/* GODE PRISER PAGE */
+.fast-lav-pris {
+  /*  .heading {
+  } */
+  .cat-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 25px;
+    @media (min-width: 762px) {
+      margin: 0;
+    }
+    .cat {
+      flex: 1 0 200px;
+      background-color: $softsmoke;
+      padding: 20px;
+      /*     margin-left: 25px; 
+      margin-right: 25px;  */
+      display: flex; /* Tilføj denne linje */
+      flex-direction: column; /* Tilføj denne linje */
+      align-items: center;
+      justify-content: center;
+      background-image: url(../assets/svg/imusicpattern.svg);
     }
   }
 }
