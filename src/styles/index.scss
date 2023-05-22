@@ -58,6 +58,7 @@ button {
   margin: 25px;
 
   .heading {
+    margin: 25px;
     h2 {
       font-size: $font-s-h2-mob;
       color: $coal;
@@ -73,12 +74,15 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    gap: 8px;
+    margin: 25px;
 
     .cat {
       flex: 1 0 200px;
       background-color: $softsmoke;
       padding: 20px;
+      /*     margin-left: 25px; 
+      margin-right: 25px;  */
       display: flex; /* Tilføj denne linje */
       flex-direction: column; /* Tilføj denne linje */
       align-items: center;
@@ -93,16 +97,20 @@ button {
         padding-bottom: 20px;
         /*      display: flex;
         align-items: baseline; */
-        img {
-          width: 40%;
+        /*   img {
+          width: 50%;
           object-fit: contain;
-        }
+        } */
 
-        .film {
-          width: 35%;
+        /*  .film {
+          width: 40%;
+        } */
+        img {
+          width: 70px;
+          height: 70px;
         }
         .bog {
-          padding-top: 22px;
+          padding-top: 15px;
         }
       }
     }
@@ -110,6 +118,73 @@ button {
     .btn-wrapper {
       margin-top: auto;
       display: flex;
+    }
+  }
+}
+/* APPETIZER SECTIONS */
+.store-txt {
+  margin: 50px;
+}
+
+/* HVORFOR HANDLE HER - SECTION */
+.shop-here {
+  background-color: $softsmoke;
+  margin: 0;
+  width: 100vw;
+  padding-bottom: 50px;
+  h3 {
+    padding-top: 50px;
+    margin: 50px;
+    font-size: $font-s-h2-mob;
+  }
+}
+.shop-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 50px;
+
+  .shop-card {
+    flex: 1 0 250px;
+    display: flex; /* Tilføj denne linje */
+    flex-direction: column; /* Tilføj denne linje */
+    gap: 8px;
+    h4,
+    p {
+      margin: 0;
+    }
+    h4 {
+      padding-top: 20px;
+      padding-bottom: 10px;
+    }
+    p {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+//flueben
+.cls-1 {
+  fill: none;
+  stroke: #026687;
+  stroke-width: 4.88px;
+}
+//flueben
+.ico-wrapper {
+  display: flex;
+  justify-content: center;
+  img {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media (min-width: 762px) {
+  .ico-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    img {
+      width: 70px;
+      height: 70px;
     }
   }
 }

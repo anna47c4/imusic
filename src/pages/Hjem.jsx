@@ -1,6 +1,9 @@
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
 import UdvalgteKategorier from "../components/UdvalgteKategorier";
+import flueBen from "../assets/svg/flueben.svg";
+import AppetizerOne from "../components/AppetizerOne";
+import AppetizerTwo from "../components/AppetizerTwo";
 function Hjem() {
   const navigate = useNavigate();
   function goToVinyler() {
@@ -33,23 +36,58 @@ function Hjem() {
       <section className="udvalgte-kategorier">
         <UdvalgteKategorier></UdvalgteKategorier>
       </section>
-      <section className="appetizer">
-        <div className="store-img">{/*           <img src="" alt="" /> */}</div>
-        <div className="store-txt">
-          <h3>
-            Med over 300.000 vinyler i vores udvalg har vi helt sikkert noget,
-            der vil begejstre din musiksmag
-          </h3>
-          <p>
-            Se vores brede udvalg af vinyler. Vi har alt hvad hjertet begærer
-            til din samling.
-          </p>
-          <div className="store-btn">
-            <Button
-              className={"cta-btn"}
-              desc={"VINYLER"}
-              clickAction={goToVinyler}
-            ></Button>
+      <section className="appetizer1">
+        <AppetizerOne></AppetizerOne>
+      </section>
+
+      <section className="appetizer2">
+        <AppetizerTwo></AppetizerTwo>
+      </section>
+      <section className="shop-here">
+        <h3>Hvorfor handle her?</h3>
+        <div className="shop-card-wrapper">
+          <div className="shop-card">
+            <div className="ico-wrapper">
+              <img src={flueBen} alt="flueben i cirkel" />
+            </div>
+            <h4>Nordens største udvalg</h4>
+            <p>
+              iMusic er Nordens største musikforhandler med 7.340.000 titler til
+              lave priser · Kæmpe udvalg af nyt og kommende materiale
+            </p>
+          </div>
+
+          <div className="shop-card">
+            <div className="ico-wrapper">
+              <img src={flueBen} alt="flueben i cirkel" />
+            </div>
+            <h4>Fri fragt v. DKK 699,00</h4>
+            <p>
+              Få gratis fragt til pakkeshop ved køb for DKK 699,00 (i Danmark).
+              Gælder ikke ved køb af gavekort.
+            </p>
+          </div>
+
+          <div className="shop-card">
+            <div className="ico-wrapper">
+              <img src={flueBen} alt="flueben i cirkel" />
+            </div>
+            <h4>Godkendt</h4>
+            <p>
+              Topvurdering på Trustpilot og Google-anmeddelser. Medlem af Dansk
+              Erhverv - Digital Handel.
+            </p>
+          </div>
+
+          <div className="shop-card">
+            <div className="ico-wrapper">
+              <img src={flueBen} alt="flueben i cirkel" />
+            </div>
+            <h4>God service</h4>
+            <p>
+              Personlig kundeservice, der er til at tale med. Hurtig responstid,
+              vores kunder er vores første prioritet.
+            </p>
           </div>
         </div>
       </section>
