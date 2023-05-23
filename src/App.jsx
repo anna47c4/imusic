@@ -28,6 +28,7 @@ import {
   VinylDataContext,
   /*   VinylDataContextProvider */
 } from "./components/VinylDataContext";
+import VinylSingle from "./pages/VinylSingle";
 
 /* const VinylDataContext = createContext([]); */
 //herunder opretter vi vores routes,
@@ -44,6 +45,7 @@ const routes = createRoutesFromElements(
     <Route path="gavekort" element={<Gavekort />} />
     <Route path="godepriser" element={<Godepriser />} />
     <Route path="/produkter/vinyler" element={<Vinyler />} />
+    <Route path="/produkter/vinyler/:id" element={<VinylSingle />} />
     <Route path="*" element={<ErrorPage />} />
   </Route>
 );

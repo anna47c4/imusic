@@ -26,6 +26,11 @@ button {
 p {
   line-height: 24px;
 }
+//brødkrumme
+.crumb {
+  font-style: $font-style-italic;
+  font-size: $font-s-p;
+}
 /* @media (min-width: 762px) {
   main {
 
