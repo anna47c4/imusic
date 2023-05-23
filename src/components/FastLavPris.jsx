@@ -58,6 +58,7 @@ function UdvalgteKategorier() {
           <img
             src={filmFastPris}
             alt="Film ikon der symboliserer fast lav pris på Film"
+            className="film"
           />
           <div className="btn-wrapper">
             <Button
