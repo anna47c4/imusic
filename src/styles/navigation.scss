@@ -23,6 +23,7 @@
         color: $offwhite;
         font-size: $font-s-navlink;
         transition: transform 0.3s ease-in-out;
+        transition: height ease 0.9s;
       }
 
       .submenu {

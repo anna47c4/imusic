@@ -11,6 +11,11 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+
+  a {
+    background-color: transparent;
+    box-shadow: none;
+  }
 }
 .vinyl {
   flex: 1 0 250px;
@@ -37,6 +42,7 @@
     .pris {
       font-size: $font-s-p;
       font-weight: $font-weight-bold;
+      color: $coal;
     }
   }
 }
@@ -50,6 +56,7 @@
   p {
     font-size: $font-s-lille-product-banner-txt;
     line-height: normal;
+    color: $coal;
   }
 }
 
@@ -95,4 +102,16 @@
 .btn-wrapper {
   margin-top: auto;
   display: flex;
+}
+/* VINYL SINGLE PAGE */
+.vinyl-details {
+  margin: 25px;
+  background-color: $softsmoke;
+  .single-view-section {
+    .left-side-wrapper {
+      .single-vinyl-img {
+        padding: 20px;
+      }
+    }
+  }
 }
