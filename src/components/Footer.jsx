@@ -113,7 +113,12 @@ function Footer() {
               <form>
                 <div className="form-group">
                   <label htmlFor="email">Nyhedsbrev</label>
-                  <input type="text" name="email" id="email"></input>
+                  <input
+                    type="text"
+                    name="email"
+                    className="footer-input"
+                    id="email"
+                  ></input>
                   <button type="submit">TILMELD</button>
                 </div>
               </form>

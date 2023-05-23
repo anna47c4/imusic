@@ -196,14 +196,14 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 50px;
+    .store-img {
+      order: 2;
+    }
   }
 
   .appetizer2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    .store-img {
-      order: 2;
-    }
   }
 }
 
@@ -298,7 +298,7 @@ p {
     color: $offwhite;
   }
 }
-form {
+.gavekort-form {
   display: flex;
   flex-direction: column;
   margin: 25px;
@@ -360,8 +360,11 @@ form {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    margin: 25px;
     padding-bottom: 50px;
+    text-align: center;
+    @media (min-width: 762px) {
+      margin: 25px;
+    }
 
     .vinyl-tilbud {
       background-image: url(../assets/img/tilbudbaggrund1.webp);
@@ -403,8 +406,9 @@ form {
   }
 }
 .fast-lav-pris {
-  /*  .heading {
-  } */
+  .heading {
+    margin: 25px;
+  }
   .cat-wrapper {
     display: flex;
     flex-wrap: wrap;

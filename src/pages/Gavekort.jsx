@@ -26,13 +26,13 @@ function GiftCardForm() {
     <div className="gift-card-form">
       <h2>Køb et gavekort</h2>
 
-      <form onSubmit={handleSubmit}>
+      <form className="gavekort-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="amount">Gavekortbeløb i DKK:</label>
           <input
             type="text"
             id="amount"
-            value={amount.toString()}
+            value={amount}
             onChange={(e) => setAmount(parseInt(e.target.value))}
           />
         </div>
