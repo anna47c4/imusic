@@ -47,8 +47,6 @@ function VinylSingle() {
                 <p>Del varen med dine venner:</p>
                 <div className="some-svg">
                   <svg
-                    width="40"
-                    height="40"
                     viewBox="0 0 40 40"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -60,8 +58,6 @@ function VinylSingle() {
                   </svg>
 
                   <svg
-                    width="46"
-                    height="37"
                     viewBox="0 0 46 37"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -73,8 +69,6 @@ function VinylSingle() {
                   </svg>
 
                   <svg
-                    width="46"
-                    height="34"
                     viewBox="0 0 46 34"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"

@@ -12,9 +12,16 @@
   justify-content: center;
   gap: 10px;
 
+  /*   margin: 25px;
+  @media (min-width: 762px) {
+    margin: 0px;
+  } */
+
   a {
     background-color: transparent;
     box-shadow: none;
+    margin: 0;
+    padding: 0;
   }
 }
 .vinyl {
@@ -106,11 +113,36 @@
 /* VINYL SINGLE PAGE */
 .vinyl-details {
   margin: 25px;
-  background-color: $softsmoke;
+
   .single-view-section {
+    background-color: $softsmoke;
+    padding: 20px;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
     .left-side-wrapper {
       .single-vinyl-img {
         padding: 20px;
+
+        figcaption {
+          font-size: $font-s-lille-p;
+        }
+      }
+    }
+    aside.share-content {
+      .some-svg svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .produkt-forslag-section {
+    .produkt-wrapper {
+      a {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
       }
     }
   }
