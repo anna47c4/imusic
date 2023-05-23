@@ -298,6 +298,54 @@ p {
     color: $offwhite;
   }
 }
+
+.feedback-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  background-color: $coal;
+  p {
+    font-size: $font-s-h3-mob;
+    line-height: 30px;
+    color: $offwhite;
+    margin: 25px;
+
+    @media (min-width: 762px) {
+      inline-size: 600px;
+    }
+  }
+
+  .gift-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .giftcard {
+      width: 108px;
+      height: 108px;
+      animation: giftAnimation 5s linear 1;
+
+      @keyframes giftAnimation {
+        0% {
+          transform: rotate(0deg) scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: rotate(360deg) scale(1.5);
+          opacity: 1;
+        }
+        100% {
+          transform: rotate(720deg) scale(0.5);
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
 .gavekort-form {
   display: flex;
   flex-direction: column;
