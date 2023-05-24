@@ -1,13 +1,16 @@
+//import af stylesheet med variables (colors, font)
 @import "partials/variables";
+
+//container der holder footer content
 .footer-wrapper {
-  /*   height: 1300px; */
   height: fit-content;
   background-color: $coal;
   margin-bottom: 0;
   padding-bottom: 20px;
+  //selve footeren
   footer {
     margin: 0px 30px 0px 30px;
-
+    //footer informations del (links til FAQ, kontakt, mv.)
     .information {
       margin-bottom: 50px;
       p {
@@ -15,7 +18,7 @@
         font-size: $font-s-p;
         line-height: normal;
       }
-
+      //overskrift "information"
       .heading {
         margin: 0;
         padding-top: 50px;
@@ -23,9 +26,10 @@
         font-weight: $font-weight-semib;
       }
     }
-
+    //some del af footeren med logoer
     .some {
       margin-bottom: 50px;
+      //"SoMe"
       p {
         color: $offwhite;
         font-size: $font-s-h3-mob;
@@ -37,13 +41,13 @@
         margin-right: 12px;
       }
     }
+    //nyhedsbrev form
     form {
       margin-bottom: 50px;
       .form-group {
         display: flex;
         flex-direction: column;
         gap: 8px;
-
         label {
           color: $offwhite;
           font-weight: $font-weight-semib;
@@ -63,10 +67,12 @@
         }
       }
     }
+    //imusic hvidt logo
     .hvidt-logo {
       margin-bottom: 50px;
       width: 40%;
     }
+    //forskellige ikoner / logoer "stempler"
     .row-two {
       .ikoner {
         .group1 {
@@ -102,7 +108,7 @@
       }
     }
   }
-
+  //copyright del af footer
   .row-three {
     .copyright1,
     .copyright2 {
@@ -116,14 +122,10 @@
     }
   }
 }
-/*  .group-one {
-    display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));   */
 
 /* DESKTOP FOOTER STYLING */
 @media (min-width: 762px) {
   .footer-wrapper {
-    height: 800px;
     footer {
       .row-one {
         display: flex;
@@ -136,7 +138,6 @@
           }
         }
       }
-
       .hvidt-logo {
         margin-bottom: 0;
         width: 60%;
@@ -181,7 +182,6 @@
       }
     }
   }
-
   .row-three {
     .copyright1,
     .copyright2 {
