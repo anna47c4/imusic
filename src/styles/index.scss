@@ -1,5 +1,8 @@
+//import af vores variabler (farver, font, mv.)
 @import "partials/variables";
-//GENERAL STYLING//
+/* EN SMULE GENERAL STYLING */
+//sørger for at vores rootfontsize er 16px,
+//og at alt tekst er af den valgte font family
 :root {
   font-size: 16px;
   font-family: $font-family;
@@ -10,8 +13,8 @@ body {
   background-color: $offwhite;
 }
 main {
-  max-width: 1240px;
-  margin: auto;
+  max-width: 1240px; //indholdet kan ikke blive større end
+  margin: auto; //centrerer indholdet, og laver whitespace
   padding: 0;
 }
 
@@ -31,13 +34,11 @@ p {
   font-style: $font-style-italic;
   font-size: $font-s-p;
 }
-/* @media (min-width: 762px) {
-  main {
-
-  }
-} */
-/* LANDINGPAGE STYLING */
-//herosection
+////////////////////////////////////////////////////////////////////////
+//
+//LANDINGPAGE STYLING
+//
+/* HEROSECTION */
 .hero-section {
   margin: 0;
   padding: 0;
@@ -47,28 +48,28 @@ p {
   background-image: url("../assets/svg/soundwave_1920X1080.svg");
   background-size: cover;
   background-repeat: none;
-
+  //desktop tilpasning af layout
   @media (min-width: 762px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
-
+  //'splash' billede af de fire vinyler
   .top-img {
     display: flex;
     justify-content: center;
     padding-top: 100px;
     img {
       width: 50%;
+      //desktop tilpasning
       @media (min-width: 762px) {
         width: 80%;
       }
     }
   }
-
+  //hersection tekst
   .hero-txt {
     margin: 50px;
-
     h1 {
       font-size: $font-s-h1-mob;
       color: $offwhite;
@@ -78,19 +79,22 @@ p {
       color: $offwhite;
     }
   }
-
+  //herosection call to action btn (Vinyler)
   .cta-btn-wrapper {
     display: flex;
     justify-content: center;
+    //desktop tilpasning
     @media (min-width: 762px) {
       justify-content: flex-start;
     }
   }
 }
 
-//section 2 - udvalgte kategorier
+/* UDVALGTE KATEGORIER SECTION */
+//sektion på landingpage, hvor produkt ikonerne leder til de respektive produktsider
 .udvalgte-kategorier {
   margin-bottom: 50px;
+  //overskrift i sektionen
   .heading {
     margin: 25px;
     h2 {
@@ -102,100 +106,96 @@ p {
     p {
       font-size: $font-s-p;
     }
-    @media (min-width: 1300px) {
+    //desktop tilpasning
+    @media (min-width: 1240px) {
       margin-left: 0px;
     }
   }
+  //container der holder de fire kategori 'cards'
   .cat-wrapper {
-    /*     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+    /*     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */ //grid fravalgt til fordel for flex, da det ligger sig bedre
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
     margin: 25px;
+    //særlig mobil tilpasning
     @media (min-width: 762px) {
       margin: 0;
     }
 
+    //den enkelte kategori boks
     .cat {
-      flex: 1 0 200px;
+      flex: 1 0 200px; //en basis width på 200px, metoden svarer til grid repeat minmax
       background-color: $softsmoke;
       padding: 20px;
-      /*     margin-left: 25px; 
-      margin-right: 25px;  */
-      display: flex; /* Tilføj denne linje */
-      flex-direction: column; /* Tilføj denne linje */
+      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      /*      background-image: url(../assets/svg/imusicpattern.svg); */
-
+      //container til selve produkt ikonerne
       .img-wrapper {
         display: flex;
-        flex-direction: column; /* Tilføj denne linje */
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         padding-bottom: 20px;
-        /*      display: flex;
-        align-items: baseline; */
-        /*   img {
-          width: 50%;
-          object-fit: contain;
-        } */
-
-        /*  .film {
-          width: 40%;
-        } */
+        //produktikonets størrelse
         img {
           width: 70px;
           height: 70px;
         }
+        //lidt padding til bogen for at den aligner ordentligt
         .bog {
           padding-top: 15px;
         }
       }
     }
-
+    //produktknappens container
     .btn-wrapper {
       margin-top: auto;
       display: flex;
     }
   }
 }
-/* APPETIZER SECTIONS */
-/* .appetizer1 {
-  background-image: url("../assets/img/soundwave_kvadratisk_1.webp");
-  background-size: cover;
-} */
+
+/* APPETIZER SECTIONS (de to sektioner, hvor den ene leder til vinyler, og den anden leder til pladespillere) */
+//billedet fra butikken (og af pladespilleren selvom det ikke er fra butikken)
 .store-img {
   background-color: $coal;
   img {
     width: 100%;
   }
 }
+//tekst container (og den samme container som classerne nedenunder er tilkoblet)
 .store-txt-wrapper {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+//den ene (butik boks) baggrund
 .background1 {
   background-color: $coal;
   background-image: url("../assets/svg/soundwave_1920X1080.svg");
   background-size: cover;
   background-position: center;
 }
-
+//den anden (pladespiller boks) baggrund
 .background2 {
   background-color: $coal;
   background-image: url("../assets/svg/soundwave_reversed.svg");
   background-size: cover;
   background-position: center;
 }
+//teksten inderboks, og tekstens farve
 .store-txt {
   margin: 50px;
   color: $offwhite;
 }
+//den første boks' (butik boksen)
 .appetizer1 {
   margin-bottom: 50px;
 }
+//desktop tilpasning
 @media (min-width: 762px) {
   .appetizer1 {
     display: grid;
@@ -205,7 +205,6 @@ p {
       order: 2;
     }
   }
-
   .appetizer2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -213,10 +212,10 @@ p {
 }
 
 /* HVORFOR HANDLE HER - SECTION */
+//hvorfor handle her - container
 .shop-here {
   background-color: $softsmoke;
   margin: 0;
-  /*   width: 100vw; */
   padding-bottom: 50px;
   margin-bottom: 50px;
   h3 {
@@ -225,12 +224,13 @@ p {
     font-size: $font-s-h2-mob;
   }
 }
+//container der wrapper den enkelte "grund" / kort til at handle her
 .shop-card-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   margin: 50px;
-
+  //det enkelte kort
   .shop-card {
     flex: 1 0 250px;
     display: flex; /* Tilføj denne linje */
@@ -246,7 +246,7 @@ p {
     }
     p {
       padding-bottom: 10px;
-
+      //desktop tilpasning
       @media (min-width: 762px) {
         inline-size: 250px;
       }
@@ -254,39 +254,30 @@ p {
   }
 }
 
-//flueben
+//flueben svg
 .cls-1 {
   fill: none;
   stroke: #026687;
   stroke-width: 4.88px;
 }
-//flueben
+//flueben wrapper
 .ico-wrapper {
   display: flex;
   justify-content: center;
   padding-top: 8px;
+  @media (min-width: 762px) {
+    display: flex;
+    justify-content: flex-start;
+  }
+
   img {
     width: 70px;
     height: 70px;
   }
 }
-@media (min-width: 762px) {
-  .ico-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    img {
-      width: 70px;
-      height: 70px;
-    }
-  }
-}
-/* @media (min-width: 762px) {
-  .herosection {
 
-  }
-}
- */
-/* GIFT CARD PAGE */
+////////////////////////////////////////////////////
+/* GAVEKORT PAGE */
 .gift-card-form {
   display: flex;
   flex-direction: column;
@@ -304,7 +295,6 @@ p {
     color: $offwhite;
   }
 }
-
 .feedback-message {
   display: flex;
   flex-direction: column;
@@ -323,17 +313,16 @@ p {
       inline-size: 600px;
     }
   }
-
+  //container der holder gavekort svg
   .gift-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    //animation ved køb af gavekort
     .giftcard {
       width: 108px;
       height: 108px;
       animation: giftAnimation 5s linear 1;
-
       @keyframes giftAnimation {
         0% {
           transform: rotate(0deg) scale(1);
@@ -351,12 +340,11 @@ p {
     }
   }
 }
-
+//den faktiske form
 .gavekort-form {
   display: flex;
   flex-direction: column;
   margin: 25px;
-
   div {
     display: flex;
     flex-direction: column;
@@ -367,7 +355,6 @@ p {
       font-weight: bold;
       color: $offwhite;
     }
-
     input {
       padding: 8px;
       border: 1px solid #ccc;
@@ -376,12 +363,14 @@ p {
     }
   }
 }
-
+////////////////////////////////////////////////////////////
 /* GODE PRISER PAGE */
+//hero sektion
 .gode-priser-hero {
   background-image: url(../assets/svg/soundwave_1920X1080.svg);
   background-size: cover;
   background-position: center;
+  //tekst i herosektion
   .hero-txt {
     color: $offwhite;
     margin: 25px;
@@ -391,35 +380,38 @@ p {
       font-size: $font-s-h1-mob;
       line-height: 31px;
     }
-
+    //herosektion CTA ('deltg') knap
     .cta-btn-wrapper {
       display: flex;
       justify-content: center;
       padding-top: 25px;
+      //desktop tilpasning
       @media (min-width: 762px) {
         justify-content: flex-start;
       }
     }
   }
 }
-
+//tilbuds sektion
 .tilbud {
   background-color: $softsmoke;
-
+  //tilbuds overskrift og p
   .txt {
     padding-top: 50px;
     margin: 25px;
   }
+  //container der wrapper de to tilbudsblokke (vinyler, k-pop)
   .tilbud-wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     padding-bottom: 50px;
     text-align: center;
+    //desktop tilpasning
     @media (min-width: 762px) {
       margin: 25px;
     }
-
+    //vinyltilbud blok
     .vinyl-tilbud {
       background-image: url(../assets/img/tilbudbaggrund1.webp);
       background-size: cover;
@@ -435,11 +427,12 @@ p {
       button {
         color: $offwhite;
       }
+      //desktop tilpasning
       @media (min-width: 762px) {
         padding: 60px;
       }
     }
-
+    //k-pop tilbuds blok
     .kpop-tilbud {
       background-image: url(../assets/img/tilbudbaggrund2.webp);
       background-size: cover;
@@ -459,41 +452,46 @@ p {
     }
   }
 }
+//fast lav pris sektion
 .fast-lav-pris {
   padding-bottom: 50px;
+  //overskrift
   .heading {
     margin: 25px;
+    //desktop tilpasning
     @media (min-width: 762px) {
       margin: 0;
     }
   }
+  //kategori container
   .cat-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
     margin: 25px;
+    //desktop tilpasning
     @media (min-width: 762px) {
       margin: 0;
     }
+    //den enkelte kategori boks
     .cat {
       flex: 1 0 200px;
       background-color: $softsmoke;
       padding: 20px;
-      /*     margin-left: 25px; 
-      margin-right: 25px;  */
-      display: flex; /* Tilføj denne linje */
-      flex-direction: column; /* Tilføj denne linje */
+      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       background-image: url(../assets/svg/imusicpattern.svg);
-
+      //fast lav pris kategori ikonet
       img {
         width: 50%;
         align-items: center;
         padding-bottom: 25px;
         padding-top: 25px;
       }
+      //særlig tilpasning af film ikonet
       .film {
         width: 44%;
       }
