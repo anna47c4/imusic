@@ -1,7 +1,11 @@
+//components import
 import Button from "./Button";
+//react import
 import { useNavigate } from "react-router-dom";
+//asset import
 import pladeSpiller from "../assets/img/pladespiller.webp";
 function AppetizerTwo() {
+  //navigate function, vi kobler på vores cta btn
   const navigate = useNavigate();
   function goToVinyler() {
     navigate("../produkter/vinyler");

@@ -1,10 +1,15 @@
+//react imports
+import { useNavigate } from "react-router-dom";
+//asset imports
 import bogFastPris from "../assets/svg/lilleBogFastPris.svg";
 import filmFastPris from "../assets/svg/lilleFilmFastPris.svg";
 import cdFastPris from "../assets/svg/lilleCdFastPris.svg";
 import vinylFastPris from "../assets/svg/lilleVinylFastPris.svg";
+//components imports
 import Button from "./Button";
-import { useNavigate } from "react-router-dom";
+
 function UdvalgteKategorier() {
+  //herunder har vi forskellige navigates funktioner, som sender brugeren til den klikkede kategoris side
   const navigate = useNavigate();
   function goToVinyler() {
     navigate("./produkter/vinyler");
@@ -18,6 +23,7 @@ function UdvalgteKategorier() {
   function goToBog() {
     navigate("./produkter/boger");
   }
+  //return, det indhold vi viser i vores frontend
   return (
     <>
       <div className="heading">

@@ -1,5 +1,5 @@
+//react imports
 import { useNavigate } from "react-router-dom";
-
 //logo import
 import logoHvid from "../assets/svg/logo_hvid.svg";
 //billeder & ikon imports
@@ -23,6 +23,8 @@ import dinersClub from "../assets/footer_img/pdinersclub.webp";
 import discover from "../assets/footer_img/pdiscover.webp";
 import jcb from "../assets/footer_img/jcb.webp";
 function Footer() {
+  //nedestående navigate bruger vi til at sende
+  //brugeren til forsiden, funktionen har vi tilkoblet logoet
   const navigate = useNavigate();
   function goToHome() {
     navigate("./");

@@ -1,46 +1,22 @@
-/* eslint-disable react/prop-types */
-/*import { useState } from "react";
-import { useRef } from "react";
-function Collapsible(props) {
-  const [open, setOPen] = useState(false);
-
-  const toggle = () => {
-    setOPen(!open);
-  };
-
-  return (
-    <>
-      <div>
-        <button onClick={toggle}>{props.label}</button>
-      </div>
-      <div className="content-parent">
-        ref=
-        {contentRef.map(
-          (ref) =>
-            (style = open
-              ? { height: contentRef.current.scrollHeight + "px" }
-              : { height: "0px" } >
-                <div className="content">{props.children}</div>)
-        )}}
-      </div>
-    </>
-  );
-}
-
-export default Collapsible;
- */
-
+//react imports
 /* eslint-disable react/prop-types */
 import { useState, useRef } from "react";
 
 function Collapsible(props) {
-  const [open, setOpen] = useState(false);
-  const contentRef = useRef();
+  //"props" betyder at funktionen modtager noget, i dette tilfælde
+  //indholdet til de forskellige collapsibles, det er blevet sendt fra vinyl single siden
 
+  //herunder har vi et state der styrer om indholdet er vist eller skjult
+  const [open, setOpen] = useState(false);
+  //herunder har vi opsat en useRef, som minder om getElementByID
+  //vi bruger den til at tracke den enkelte boks med contents højde, så
+  //stylingen tilpasser sig derefter
+  const contentRef = useRef();
+  //funktionen der styrer åbningen og lukningen
   const toggle = () => {
     setOpen(!open);
   };
-
+  //vores return statements med conditions der tjekker efter højden
   return (
     <>
       <div className="collapsible-top">

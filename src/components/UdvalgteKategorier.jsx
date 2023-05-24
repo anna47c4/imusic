@@ -1,10 +1,16 @@
+//react imports
+import { useNavigate } from "react-router-dom";
+//component imports
+import Button from "./Button";
+//assets imports
 import bog from "../assets/svg/bog.svg";
 import film from "../assets/svg/film.svg";
 import cd from "../assets/svg/cd.svg";
 import vinyl from "../assets/svg/vinyl.svg";
-import Button from "./Button";
-import { useNavigate } from "react-router-dom";
+
 function UdvalgteKategorier() {
+  //her har vi opsat navigates til de forskellige produktkategorier
+  //så har vi tilkoblet funktionerne til de respektive knapper for hver kategori
   const navigate = useNavigate();
   function goToVinyler() {
     navigate("./produkter/vinyler");
@@ -18,6 +24,8 @@ function UdvalgteKategorier() {
   function goToBog() {
     navigate("./produkter/boger");
   }
+  //herunder har vi vores return statement, som giver os det indhold
+  //vi ønsker at vise i vores frontend
   return (
     <>
       <div className="heading">

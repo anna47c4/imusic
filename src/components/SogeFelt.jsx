@@ -1,4 +1,4 @@
-import React from "react";
+//placeholder søgefelts 'simulering'
 
 function SogeFelt() {
   return <div className="sogefelt"></div>;

@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+//react imports
+/* import { useState } from "react"; */
 
-function VinylSearch({ vinyler }) {
-  const [searchTerm, setSearchTerm] = useState("");
+/* function VinylSearch() { */
+/*   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-
-  // Funktionen, der udfører søgningen
-  const performSearch = () => {
+ */
+// Funktionen, der udfører søgningen
+/*   const performSearch = () => {
     const filteredResults = vinyler.filter(
       (vinyl) =>
         vinyl.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -13,9 +14,9 @@ function VinylSearch({ vinyler }) {
     );
 
     setSearchResults(filteredResults);
-  };
+  }; */
 
-  return (
+/*   return (
     <div>
       <input
         type="text"
@@ -23,10 +24,10 @@ function VinylSearch({ vinyler }) {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button onClick={performSearch}>Søg</button>
+      <button onClick={performSearch}>Søg</button> */
 
-      {/* Vis søgeresultater */}
-      <ul>
+/* Vis søgeresultater */
+/*    <ul>
         {searchResults.map((vinyl) => (
           <li key={vinyl.id}>
             {vinyl.artist} - {vinyl.title}
@@ -38,3 +39,4 @@ function VinylSearch({ vinyler }) {
 }
 
 export default VinylSearch;
+ */

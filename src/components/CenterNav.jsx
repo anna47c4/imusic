@@ -1,10 +1,14 @@
+//asset import
 import logoSort from "../assets/svg/logo_sort.svg";
+//component import
 import SogeFelt from "./SogeFelt";
+//react imports
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 function CenterNav() {
+  //state der styrer om skærmen er desktop eller ikke
   const [isDesktop, setIsDesktop] = useState(false);
-
+  //useEffect der sætter skærmen til værende desktop ved 762px
   useEffect(() => {
     const checkScreenSize = () => {
       setIsDesktop(window.innerWidth >= 762);
