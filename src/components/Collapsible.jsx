@@ -43,7 +43,7 @@ function Collapsible(props) {
 
   return (
     <>
-      <div>
+      <div className="collapsible-top">
         <button onClick={toggle}>
           {props.label}{" "}
           <svg

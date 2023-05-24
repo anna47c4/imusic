@@ -107,18 +107,21 @@ function VinylSingle() {
                   <h1>{selectedVinyl.titel}</h1>
                   <div className="wrapper">
                     <h2>{selectedVinyl.kunstner}</h2>
-                    <p>{selectedVinyl.farve}</p>
+                    {selectedVinyl.farve && <p>{selectedVinyl.farve}</p>}
                   </div>
-                  <div className="edition-tag">
-                    <p>{selectedVinyl.edition}</p>
-                  </div>
+                  {selectedVinyl.edition && (
+                    <div className="edition-tag">
+                      <p>{selectedVinyl.edition}</p>
+                    </div>
+                  )}
+
                   <div className="pris">
-                    <p>PRIS PR STK</p>
-                    <p>DKK {selectedVinyl.pris}</p>
+                    <p className="pr-stk">PRIS PR STK</p>
+                    <p className="vinyl-pris">DKK {selectedVinyl.pris}</p>
                     {/*           <p className="lager-tag"></p> */}
                   </div>
                   {/*  <p>{selectedVinyl.desc_lang}</p> */}
-                  <div>
+                  <div className="read-more">
                     <p>
                       {visLæsMere
                         ? selectedVinyl.desc_lang // Vis den fulde tekst
@@ -127,7 +130,7 @@ function VinylSingle() {
                     </p>
                     {selectedVinyl.desc_lang.length > 100 && (
                       <a onClick={toggleLæsMere}>
-                        {visLæsMere ? "Læs mindre" : "Læs mere..."}
+                        {visLæsMere ? "LÆS MINDRE" : "LÆS MERE"}
                       </a>
                     )}
                   </div>
@@ -144,11 +147,9 @@ function VinylSingle() {
                     <hr></hr>
                     <p>Genre: {selectedVinyl.genre}</p>
                   </Collapsible>
-                  <hr />
                   <Collapsible label="Trackliste">
                     <p>{selectedVinyl.trackliste}</p>
                   </Collapsible>
-                  <hr />
                   <Collapsible label="Leveringsoplysninger">
                     <p>
                       <em>Hvornår leveres min bestilling?</em> Er varen på lager
@@ -278,18 +279,20 @@ function VinylSingle() {
                   <h1>{selectedVinyl.titel}</h1>
                   <div className="wrapper">
                     <h2>{selectedVinyl.kunstner}</h2>
-                    <p>{selectedVinyl.farve}</p>
+                    {selectedVinyl.farve && <p>{selectedVinyl.farve}</p>}
                   </div>
-                  <div className="edition-tag">
-                    <p>{selectedVinyl.edition}</p>
-                  </div>
+                  {selectedVinyl.edition && (
+                    <div className="edition-tag">
+                      <p>{selectedVinyl.edition}</p>
+                    </div>
+                  )}
                   <div className="pris">
-                    <p>PRIS PR STK</p>
-                    <p>DKK {selectedVinyl.pris}</p>
+                    <p className="pr-stk">PRIS PR STK</p>
+                    <p className="vinyl-pris">DKK {selectedVinyl.pris}</p>
                     {/*           <p className="lager-tag"></p> */}
                   </div>
                   {/*  <p>{selectedVinyl.desc_lang}</p> */}
-                  <div>
+                  <div className="read-more">
                     <p>
                       {visLæsMere
                         ? selectedVinyl.desc_lang // Vis den fulde tekst
@@ -298,7 +301,7 @@ function VinylSingle() {
                     </p>
                     {selectedVinyl.desc_lang.length > 100 && (
                       <a onClick={toggleLæsMere}>
-                        {visLæsMere ? "Læs mindre" : "Læs mere..."}
+                        {visLæsMere ? "LÆS MINDRE" : "LÆS MERE"}
                       </a>
                     )}
                   </div>
@@ -315,11 +318,9 @@ function VinylSingle() {
                     <hr></hr>
                     <p>Genre: {selectedVinyl.genre}</p>
                   </Collapsible>
-                  <hr />
                   <Collapsible label="Trackliste">
                     <p>{selectedVinyl.trackliste}</p>
                   </Collapsible>
-                  <hr />
                   <Collapsible label="Leveringsoplysninger">
                     <p>
                       <em>Hvornår leveres min bestilling?</em> Er varen på lager
