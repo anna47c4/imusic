@@ -120,17 +120,24 @@
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
     .left-side-wrapper {
       .single-vinyl-img {
-        padding: 20px;
-
         figcaption {
           font-size: $font-s-lille-p;
+          padding-bottom: 25px;
         }
       }
     }
     aside.share-content {
-      .some-svg svg {
-        width: 30px;
-        height: 30px;
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      .some-svg {
+        display: flex;
+        gap: 4px;
+        svg {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
   }
