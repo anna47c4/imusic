@@ -131,11 +131,18 @@
       .info-txt-shown {
         h1 {
           font-size: $font-s-h1-mob;
+          padding: 0;
+          margin: 0;
+          padding-bottom: 20px;
         }
         .wrapper {
+          padding-top: 0;
+          margin-top: 0;
           h2 {
             font-size: $font-s-h2-mob;
             color: $steelgrey;
+            padding-top: 0;
+            margin-top: 0;
           }
           p {
             font-size: $font-s-lille-product-banner-txt;
@@ -158,24 +165,27 @@
         .pr-stk {
           font-size: $font-s-lille-p;
           color: $coal;
+          margin-bottom: 0;
         }
         .vinyl-pris {
           font-size: $font-s-p;
           color: $coal;
           font-weight: $font-weight-bold;
+          margin-top: 0;
         }
       }
       .read-more {
-        padding-bottom: 25px;
+        padding-bottom: 30px;
         p {
           line-height: 24px;
         }
         a {
           text-decoration: underline;
+          color: $steelgrey;
         }
       }
       .cta-btn {
-        margin-bottom: 25px;
+        margin-bottom: 30px;
       }
     }
     aside.share-content {

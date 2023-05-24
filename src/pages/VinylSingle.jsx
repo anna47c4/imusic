@@ -30,7 +30,7 @@ function VinylSingle() {
   const { id } = useParams();
   // eslint-disable-next-line no-unused-vars
   const vinylData = useContext(VinylDataContext);
-  const limitedProducts = vinylData.slice(7, 12); // Opret en ny array med kun de første 4 produkter
+  const limitedProducts = vinylData.slice(7, 11); // Opret en ny array med kun de første 4 produkter
   console.log("ID:", id);
   console.log("vinylData:", vinylData);
 
@@ -166,7 +166,7 @@ function VinylSingle() {
 
             <section className="produkt-forslag-section">
               <h2>Andre så også</h2>
-              <div className="produkt-wrapper">
+              <div className="produkt-wrapper vinyl-wrapper">
                 {limitedProducts.map((vinyl) => (
                   <Link
                     to={`/produkter/vinyler/${vinyl.id}`}
@@ -374,7 +374,7 @@ function VinylSingle() {
 
             <section className="produkt-forslag-section">
               <h2>Andre så også</h2>
-              <div className="produkt-wrapper">
+              <div className="produkt-wrapper vinyl-wrapper">
                 {limitedProducts.map((vinyl) => (
                   <Link
                     to={`/produkter/vinyler/${vinyl.id}`}
