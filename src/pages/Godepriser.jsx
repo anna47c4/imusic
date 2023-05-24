@@ -1,12 +1,17 @@
+//components import
 import Button from "../components/Button";
 import FastLavPris from "../components/FastLavPris";
-/* import tilbudBg1 from "../assets/img/tilbudbaggrund1.webp" */
+//react imports
 import { useNavigate } from "react-router-dom";
 function Godepriser() {
+  //vi opsætter en vej til vinyl siden, og
+  //kobler funktionen på vores knap
   const navigate = useNavigate();
   function goToVinyler() {
     navigate("../produkter/vinyler");
   }
+  //herunder har vi vores return statement, som
+  //giver os det indhold, vi viser i vores frontend
   return (
     <>
       <section className="gode-priser-hero">

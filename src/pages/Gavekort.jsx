@@ -1,6 +1,10 @@
+//react imports
 import { useState } from "react";
+//component imports
 import Button from "../components/Button";
+
 function GiftCardForm() {
+  //forskellige states til vores felter i formen
   const [amount, setAmount] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -8,7 +12,8 @@ function GiftCardForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Her kan du implementere den nødvendige logik for at behandle formulardataen, f.eks. sende den til en server eller udløse en handling
+    // Her kan man implementere den nødvendige logik for at behandle formulardataen, f.eks. sende den til en server eller udløse en handling
+    //når formularen er submitted console.logger vi indholdet af den
     console.log(
       "Gavekort beløb:",
       amount,
@@ -27,7 +32,9 @@ function GiftCardForm() {
     }, 300); */
     setIsSubmitted(true); //sender feedback besked så snart knap er trykket på
   };
-
+  //herunder har vi vores return, som giver os det indhold
+  //vi viser i vores frontend, og så har vi en condition der tjekker
+  //om formen er submitted, hvis ja, så returner den feedback beskeden
   return (
     <div>
       {isSubmitted ? (

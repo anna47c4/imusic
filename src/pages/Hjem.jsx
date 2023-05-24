@@ -1,20 +1,28 @@
-import Button from "../components/Button";
+//react imports
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+//component imports
 import UdvalgteKategorier from "../components/UdvalgteKategorier";
-import flueBen from "../assets/svg/flueben.svg";
-import farvedeVinyler from "../assets/img/vinyler.webp";
+import Button from "../components/Button";
 import AppetizerOne from "../components/AppetizerOne";
 import AppetizerTwo from "../components/AppetizerTwo";
+//asset imports
+import flueBen from "../assets/svg/flueben.svg";
+import farvedeVinyler from "../assets/img/vinyler.webp";
+
 function Hjem() {
+  //useEffect der sender vinduet til toppen når siden renders
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  //useNavigate, vi opsætter en navigation til vinylsiden,
+  //og kobler funktionen på vores knap
   const navigate = useNavigate();
   function goToVinyler() {
     navigate("../produkter/vinyler");
   }
-
+  //herunder har vi vores return statement, hvor vi
+  //får det indhold ud, vi viser i vores frontend
   return (
     <>
       <section className="hero-section">
