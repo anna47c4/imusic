@@ -1,16 +1,23 @@
+//react imports
 import { useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { VinylDataContext } from "../components/VinylDataContext";
 import { Link } from "react-router-dom";
+//vinyldata import
+import { VinylDataContext } from "../components/VinylDataContext";
+//component imports
 import Button from "../components/Button";
 import Collapsible from "../components/Collapsible";
 
 function VinylSingle() {
+  //useEffect der sender vinduet til tops når siden renders
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const [visLæsMere, setVisLæsMere] = useState(false);
+  //state der styrer 'læs mere' linket / knappen
+  const [visLæsMere, setVisLæsMere] = useState(false); //starter som false, fordi vi ikke vil have teksten vist før brugeren klikker
+  //state der detecter om skærmen er desktop eller ikke, og det bruger vi senere i vores return statement til at afgøre, hvilken html struktur vi vil have vist
   const [isDesktop, setIsDesktop] = useState(false);
+  //useEffect til at tjekke skærmstørrelsen
   useEffect(() => {
     const checkScreenSize = () => {
       setIsDesktop(window.innerWidth >= 762);
@@ -27,25 +34,30 @@ function VinylSingle() {
       window.removeEventListener("resize", checkScreenSize);
     };
   }, []);
-
+  //nedestående har vi opsat for at bruge id'et for den klikkede vinyl til at oprette singlepagen for netop den
   const { id } = useParams();
-  // eslint-disable-next-line no-unused-vars
+  //herunder opbevarer vi vores importerede vinyldata i en const
   const vinylData = useContext(VinylDataContext);
+  //her der slicer vi i vores array af data (bruges senere til at vise, 'andre så også' produkterne)
   const limitedProducts = vinylData.slice(7, 11); // Opret en ny array med kun de første 4 produkter
+  //console.log til tjekning ift. om dataen er korrekt, og ID'et matcher det klikkede produkt
   console.log("ID:", id);
   console.log("vinylData:", vinylData);
-
+  //her styrer vi åben og luk / visning, ikke visning af den fulde produkt tekst
   const toggleLæsMere = () => {
     setVisLæsMere(!visLæsMere);
   };
-  // Find det specifikke vinylprodukt baseret på id'et
-  /*   const selectedVinyl = vinylData.find((vinyl) => vinyl.id === id); */
+  // her finder vi det specifikke vinylprodukt baseret på id'et
   const selectedVinyl = vinylData.find((vinyl) => vinyl.id === parseInt(id));
+
   // Håndter tilfælde hvor det specifikke vinylprodukt ikke findes
   if (!selectedVinyl) {
     return <div>Vinylproduktet blev ikke fundet.</div>;
   }
-
+  //herunder har vi vores return statement, hvor vi
+  //blandt andet også har nogle conditions (if sætninger, men skrevet på en anden måde)
+  //som tjekker og afgør, hvilket indhold der skal returneres
+  //vi har to forskellige mark ups' an på om det er mobil eller desktop
   return (
     <>
       <main>
