@@ -4,6 +4,9 @@
 //der er i vores HTMl struktur, kan opstilles på samme måde
 //her, og gør sig så gælende de konkrete steder
 //fordele ved at neste styling: Samlet set hjælper muligheden for at neste SASS styling efter HTML-strukturen med at skabe en mere struktureret, genbrugelig og fleksibel stylingløsning. Det kan forbedre læsbarheden, organiseringen og vedligeholdelsen af stylingen, hvilket resulterer i en mere effektiv og produktiv udviklingsproces.
+////////////////////////////////////
+
+//root-layout der er eksisterende på alle sider
 .root-layout {
   header {
     //generelle nav indstillinger + position til at placere submenuen
@@ -16,7 +19,8 @@
         color: $offwhite;
         font-size: $font-s-navlink;
       }
-      /* submenu / dropdown styles mutual */
+      //submenu / dropdown styles mutual
+      //submenu trigger er 'produkter' punktet i navigationen
       .submenu-trigger {
         cursor: pointer;
         padding: 8px 5px 8px 5px;
@@ -25,7 +29,7 @@
         transition: transform 0.3s ease-in-out;
         transition: height ease 0.9s;
       }
-
+      //selve submenuen
       .submenu {
         opacity: 0;
         visibility: hidden;
@@ -40,11 +44,12 @@
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
       }
-
+      //når submenuen er åben
       .submenu.open {
         opacity: 1;
         visibility: visible;
       }
+      //menupunkterne i dropdown
       .submenu li {
         padding: 5px 0;
       }
@@ -53,6 +58,7 @@
         text-decoration: none;
         background-color: $offwhite;
       }
+      //når der er klikket ind på et produkt
       .submenu a.active {
         color: $bloodorange;
       }
@@ -66,7 +72,7 @@
         text-align: center;
       }
     }
-    /* desktop navigation */
+    //desktop navigation
     .desktop-menu nav {
       display: flex;
       justify-content: space-evenly;
@@ -75,7 +81,6 @@
         display: grid;
         padding: 8px 5px 8px 5px;
       }
-
       .submenu-trigger svg {
         fill: $offwhite;
       }
@@ -83,7 +88,7 @@
         top: 40%;
       }
     }
-    /* mobil navigation */
+    //mobil navigation
     .mobil-menu nav {
       border-top: 1px solid black;
       padding: 8px;
@@ -101,7 +106,6 @@
         margin-bottom: 8px;
         color: black;
       }
-
       .submenu-trigger {
         background-color: $offwhite;
         color: black;
@@ -133,7 +137,7 @@
       padding-right: 15px;
     }
   }
-  /* top naigation */
+  //top naigation
   //usp linje (& ikoner) synlig på desktop
   .top-nav {
     p {
@@ -142,13 +146,13 @@
     display: flex;
     justify-content: space-between;
     background-color: $softsmoke;
-
+    //elementer der plpaceres til venstre på desktop
     .left {
       width: 100vw;
       display: flex;
       justify-content: space-evenly;
     }
-
+    //elementer der plpaceres til højre på desktop
     .right {
       display: flex;
       place-content: end;
@@ -165,7 +169,7 @@
       }
     }
   }
-  /* center / midter navigation */
+  //center / midter navigation
   //(logo, søgefelt, kurv) generelle indstillinger
   .center-nav {
     display: flex;
@@ -182,9 +186,9 @@
       height: 28px;
     }
   }
-  /* brødkrummer */
+  //brødkrummer
   .breadcrumbs {
-    max-width: 1200px;
+    max-width: 1240px;
     margin: 20px auto;
   }
   //alle brødkrummer inside placere sig inline-block
@@ -207,7 +211,6 @@
   .krumme:hover {
     color: $bloodorange;
   }
-
   //enkelte media indstillinger
   @media (max-width: 762px) {
     .top-nav {
