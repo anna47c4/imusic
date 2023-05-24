@@ -4,6 +4,7 @@ import { VinylDataContext } from "../components/VinylDataContext";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Collapsible from "../components/Collapsible";
+
 function VinylSingle() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -107,7 +108,9 @@ function VinylSingle() {
                   <h1>{selectedVinyl.titel}</h1>
                   <div className="wrapper">
                     <h2>{selectedVinyl.kunstner}</h2>
-                    {selectedVinyl.farve && <p>{selectedVinyl.farve}</p>}
+                    <div className="farve">
+                      {selectedVinyl.farve && <p>{selectedVinyl.farve}</p>}
+                    </div>
                   </div>
                   {selectedVinyl.edition && (
                     <div className="edition-tag">
@@ -118,15 +121,13 @@ function VinylSingle() {
                   <div className="pris">
                     <p className="pr-stk">PRIS PR STK</p>
                     <p className="vinyl-pris">DKK {selectedVinyl.pris}</p>
-                    {/*           <p className="lager-tag"></p> */}
                   </div>
-                  {/*  <p>{selectedVinyl.desc_lang}</p> */}
+
                   <div className="read-more">
                     <p>
                       {visLæsMere
-                        ? selectedVinyl.desc_lang // Vis den fulde tekst
+                        ? selectedVinyl.desc_lang // Vis den fulde tekst, vis kun 100
                         : `${selectedVinyl.desc_lang.slice(0, 100)}...`}{" "}
-                      {/* Vis kun en del af teksten */}
                     </p>
                     {selectedVinyl.desc_lang.length > 100 && (
                       <a onClick={toggleLæsMere}>
@@ -279,7 +280,9 @@ function VinylSingle() {
                   <h1>{selectedVinyl.titel}</h1>
                   <div className="wrapper">
                     <h2>{selectedVinyl.kunstner}</h2>
-                    {selectedVinyl.farve && <p>{selectedVinyl.farve}</p>}
+                    <div className="farve">
+                      {selectedVinyl.farve && <p>{selectedVinyl.farve}</p>}
+                    </div>
                   </div>
                   {selectedVinyl.edition && (
                     <div className="edition-tag">

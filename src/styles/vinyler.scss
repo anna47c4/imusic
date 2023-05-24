@@ -11,11 +11,10 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-
-  /*   margin: 25px;
-  @media (min-width: 762px) {
-    margin: 0px;
-  } */
+  margin: 25px 25px 100px 25px;
+  @media (min-width: 1240px) {
+    margin: auto auto 100px auto;
+  }
 
   a {
     background-color: transparent;
@@ -65,34 +64,38 @@
     line-height: normal;
     color: $coal;
   }
-}
 
-.tag-wrapper {
-  display: flex;
-  justify-content: end;
-  gap: 4px;
-  .edition-p {
-    background-color: $mintgreen;
-    padding: 6px;
-  }
-  .nyhed-p {
-    background-color: $beachyellow;
-    padding: 6px;
-  }
-  .lagerstatus-p {
-    background-color: $skyblue;
-    padding: 6px;
-  }
-  .lav-lagerstatus-p {
-    background-color: $warninggold;
-    padding: 6px;
+  .tag-wrapper {
+    display: flex;
+    justify-content: end;
 
-    svg {
-      width: 7px;
-      height: 7px;
+    .edition-p {
+      background-color: $mintgreen;
+      padding: 6px;
+      margin-left: 4px;
+    }
+    .nyhed-p {
+      background-color: $beachyellow;
+      padding: 6px;
+      margin-left: 4px;
+    }
+    .lagerstatus-p {
+      background-color: $skyblue;
+      padding: 6px;
+      margin-left: 4px;
+    }
+    .lav-lagerstatus-p {
+      background-color: $warninggold;
+      padding: 6px;
+      margin-left: 4px;
+      svg {
+        width: 7px;
+        height: 7px;
+      }
     }
   }
 }
+
 .notag {
   .notag-p {
     background-color: transparent;
@@ -118,8 +121,21 @@
     background-color: $softsmoke;
     padding: 20px;
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+
+    @media (min-width: 762px) {
+      display: flex;
+      justify-content: space-evenly;
+    }
     .left-side-wrapper {
+      @media (min-width: 762px) {
+        padding: 20px;
+      }
       .single-vinyl-img {
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
         figcaption {
           font-size: $font-s-lille-p;
           padding-bottom: 25px;
@@ -128,6 +144,9 @@
     }
 
     .right-side-wrapper {
+      @media (min-width: 762px) {
+        padding: 20px;
+      }
       .info-txt-shown {
         h1 {
           font-size: $font-s-h1-mob;
@@ -138,16 +157,24 @@
         .wrapper {
           padding-top: 0;
           margin-top: 0;
+
           h2 {
             font-size: $font-s-h2-mob;
             color: $steelgrey;
             padding-top: 0;
             margin-top: 0;
           }
-          p {
-            font-size: $font-s-lille-product-banner-txt;
-            line-height: normal;
-            color: $coal;
+          .farve {
+            margin: 0px 0px 0px 10px;
+            padding: 10px 0px 0px 0px;
+            p {
+              font-size: $font-s-lille-product-banner-txt;
+              line-height: normal;
+              color: $coal;
+              background-color: $velvetpurple;
+              padding: 0px 6px 0px 6px;
+              margin: 0;
+            }
           }
         }
       }
@@ -156,8 +183,11 @@
         justify-content: start;
         gap: 4px;
         p {
+          font-size: $font-s-lille-product-banner-txt;
+          line-height: normal;
+          color: $coal;
           background-color: $mintgreen;
-          padding: 6px;
+          padding: 0px 6px 0px 6px;
           margin: 0;
         }
       }
@@ -178,8 +208,12 @@
         padding-bottom: 30px;
         p {
           line-height: 24px;
+          @media (min-width: 762px) {
+            inline-size: 500px;
+          }
         }
         a {
+          line-height: 24px;
           text-decoration: underline;
           color: $steelgrey;
         }
@@ -206,6 +240,7 @@
   }
 
   .produkt-forslag-section {
+    margin-bottom: 100px;
     .produkt-wrapper {
       a {
         background-color: transparent;

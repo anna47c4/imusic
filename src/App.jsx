@@ -4,7 +4,7 @@ import "./styles/index.scss";
 import "./styles/navigation.scss";
 import "./styles/footer.scss";
 import "./styles/buttons.scss";
-import "./styles/vinyler.scss";
+/* import "./styles/vinyler.scss"; */
 
 //Router imports
 import {

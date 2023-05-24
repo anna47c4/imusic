@@ -171,7 +171,7 @@ import { VinylDataContext } from "../components/VinylDataContext";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
-
+import "../styles/vinyler.scss";
 function Vinyler() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -295,7 +295,7 @@ function Vinyler() {
                         <p className="lagerstatus-p">{vinyl.lagerstatus}</p>
                       )}
                     </div>
-                    <div className="lav-agerstatus">
+                    <div className="lav-lagerstatus">
                       {vinyl.lav_lager && (
                         <p className="lav-lagerstatus-p">
                           <svg
