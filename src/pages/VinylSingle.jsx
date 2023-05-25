@@ -139,9 +139,9 @@ function VinylSingle() {
                     <p>
                       {visLæsMere
                         ? selectedVinyl.desc_lang // Vis den fulde tekst, vis kun 100
-                        : `${selectedVinyl.desc_lang.slice(0, 100)}...`}{" "}
+                        : `${selectedVinyl.desc_lang.slice(0, 130)}...`}{" "}
                     </p>
-                    {selectedVinyl.desc_lang.length > 100 && (
+                    {selectedVinyl.desc_lang.length > 130 && (
                       <a onClick={toggleLæsMere}>
                         {visLæsMere ? "LÆS MINDRE" : "LÆS MERE"}
                       </a>
@@ -149,7 +149,10 @@ function VinylSingle() {
                   </div>
 
                   <Button className={"cta-btn"} desc={"LÆG I KURV"}></Button>
-                  <Collapsible label="Produktdetaljer">
+                  <Collapsible
+                    label="Produktdetaljer"
+                    className="collapsible-top-1"
+                  >
                     <p>Medie: {selectedVinyl.medie}</p>
                     <hr></hr>
                     <p>Udgivet: {selectedVinyl.udgivet}</p>

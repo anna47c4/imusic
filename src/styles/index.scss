@@ -30,10 +30,17 @@ p {
   line-height: 24px;
 }
 //brødkrumme
+//brødkrumme-wrapper
+.breadcrumbs {
+  max-width: 1240px;
+  margin: auto;
+}
+//enkelte krumme
 .crumb {
   font-style: $font-style-italic;
   font-size: $font-s-p;
 }
+
 ////////////////////////////////////////////////////////////////////////
 //
 //LANDINGPAGE STYLING

@@ -150,7 +150,7 @@
         //billedetekst, "ved uoverenstemmelse... bla bla"
         figcaption {
           font-size: $font-s-lille-p;
-          padding-bottom: 25px;
+          padding-bottom: 20px;
         }
       }
     }
@@ -240,6 +240,9 @@
       //Læg i indkøbskurv
       .cta-btn {
         margin-bottom: 30px;
+        @media (min-width: 762px) {
+          margin-bottom: 91px;
+        }
       }
     }
     //Del denne vare med dine venner tekst + svg's
@@ -260,6 +263,7 @@
     margin-bottom: 100px;
     //Container der holder produkterne
     .produkt-wrapper {
+      margin: 0px 0px 100px 0px;
       //fjernelse af basic styling på a tag
       a {
         background-color: transparent;
@@ -281,13 +285,28 @@
   padding-top: 8px;
   padding-bottom: 8px;
   margin-bottom: 8px;
+  @media (min-width: 762px) {
+    max-width: 500px;
+  }
   label,
   button {
     background-color: $offwhite;
   }
 }
+
 .content {
   padding: 0.5rem;
+  hr {
+    @media (min-width: 762px) {
+      margin-inline-end: 2%;
+    }
+  }
+  p {
+    @media (min-width: 762px) {
+      inline-size: 500px;
+      margin-bottom: 0px 0px 10px 0px;
+    }
+  }
 }
 .content-parent {
   height: 0px;
