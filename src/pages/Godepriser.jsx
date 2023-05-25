@@ -3,6 +3,7 @@ import Button from "../components/Button";
 import FastLavPris from "../components/FastLavPris";
 //react imports
 import { useNavigate } from "react-router-dom";
+import YoutubeEmbed from "../components/YoutubeEmbed";
 function Godepriser() {
   //vi opsætter en vej til vinyl siden, og
   //kobler funktionen på vores knap
@@ -15,7 +16,10 @@ function Godepriser() {
   return (
     <>
       <section className="gode-priser-hero">
-        <div className="top-vid">{/*     <video></video> */}</div>
+        {/*  <div className="top-vid">
+        
+        </div> */}
+        <YoutubeEmbed embedId="KPkpHKR4"></YoutubeEmbed>
         <div className="hero-txt hero-btn">
           <h1>
             Spar penge på vinyler med en kampagnekode på 15% rabat til dit næste
@@ -28,11 +32,17 @@ function Godepriser() {
             et gavekort på 1000 dkk, som kan bruges på hele imusic.dk.
           </p>
           <div className="cta-btn-wrapper">
-            <Button
-              className={"cta-btn"}
-              clickAction={goToVinyler}
-              desc={"DELTAG"}
-            ></Button>
+            <a
+              href="https://perfpics.dk/kea/4_sem/some_opslag/index.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button
+                className={"cta-btn"}
+                clickAction={goToVinyler}
+                desc={"DELTAG"}
+              ></Button>
+            </a>
           </div>
         </div>
       </section>
