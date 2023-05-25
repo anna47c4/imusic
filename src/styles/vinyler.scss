@@ -1,7 +1,17 @@
 @import "partials/variables";
 
 /* VINYL SIDE */
-
+//filtreringsknapper / menu
+.filter-wrapper-genre {
+  .active {
+    color: $bloodorange;
+  }
+}
+.filter-wrapper-other {
+  .active {
+    color: $bloodorange;
+  }
+}
 //container der holder vinylprodukter
 .vinyl-wrapper {
   display: flex;
@@ -36,6 +46,10 @@
     margin: 0;
     font-size: $font-s-h4-mob;
     color: $coal;
+  }
+  p.kunstner {
+    color: $steelblue;
+    font-weight: $font-weight-bold;
   }
   //Pris på vinyl card
   .pris-wrapper {
@@ -160,7 +174,7 @@
           margin-top: 0;
           h2 {
             font-size: $font-s-h2-mob;
-            color: $steelgrey;
+            color: $steelblue;
             padding-top: 0;
             margin-top: 0;
           }

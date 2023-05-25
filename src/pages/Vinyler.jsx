@@ -38,18 +38,30 @@ function Vinyler() {
       );
       setFilteredVinyls(filteredVinyls);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [vinylData, selectedGenre, showOnlyNyheder, showOnlyFarvetVinyl]);
 
   //i denne funktion har vi vores forskellige conditions der tjekker om
   //vinylerne passer med filtreringskravet
-  function filterVinyls(vinyls, genre, nyheder, farvetVinyl) {
-    return vinyls.filter((vinyl) => {
+  function filterVinyls(vinyls, genre /* nyheder, farvetVinyl */) {
+    let all = [...vinyls];
+    if (genre !== "Alle") {
+      all = all.filter((vinyl) => vinyl.genre === genre);
+    }
+    if (showOnlyNyheder) {
+      all = all.filter((vinyl) => vinyl.nyhed);
+    }
+    if (showOnlyFarvetVinyl) {
+      all = all.filter((vinyl) => vinyl.farve === "Farvet vinyl");
+    }
+    /* return vinyls.filter((vinyl) => {
       if (genre === "Alle" && !nyheder && !farvetVinyl) return true;
       if (nyheder && !vinyl.nyhed) return false;
       if (farvetVinyl && vinyl.farve !== "Farvet vinyl") return false;
       if (genre !== "Alle" && vinyl.genre !== genre) return false;
       return true;
-    });
+    }); */
+    return all;
   }
   //her har vi en funktion der sender brugeren til forsiden
   function goToHome() {
@@ -82,10 +94,15 @@ function Vinyler() {
       <main>
         <h1>Nye & kommende vinyludgivelser</h1>
 
-        <div className="filter-wrapper">
+        <div className="filter-wrapper-genre">
           <Button
             className={selectedGenre === "Alle" ? "active" : ""}
-            clickAction={() => handleGenreFilter("Alle")}
+            clickAction={() => {
+              handleGenreFilter("Alle");
+
+              setShowOnlyNyheder(false);
+              setShowOnlyFarvetVinyl(false);
+            }}
             desc="Alle"
           />
           <Button
@@ -98,9 +115,33 @@ function Vinyler() {
             clickAction={() => handleGenreFilter("Pop")}
             desc="Pop"
           />
+
+          <Button
+            className={selectedGenre === "Metal" ? "active" : ""}
+            clickAction={() => handleGenreFilter("Metal")}
+            desc="Metal"
+          />
+
+          <Button
+            className={selectedGenre === "Country" ? "active" : ""}
+            clickAction={() => handleGenreFilter("Country")}
+            desc="Country"
+          />
+
+          <Button
+            className={selectedGenre === "Soundtrack" ? "active" : ""}
+            clickAction={() => handleGenreFilter("Soundtrack")}
+            desc="Soundtrack"
+          />
+
+          <Button
+            className={selectedGenre === "Skandinavisk" ? "active" : ""}
+            clickAction={() => handleGenreFilter("Skandinavisk")}
+            desc="Skandinavisk"
+          />
         </div>
 
-        <div className="filter-wrapper">
+        <div className="filter-wrapper-other">
           <Button
             className={showOnlyNyheder ? "active" : ""}
             clickAction={handleNyhederFilter}
@@ -113,6 +154,9 @@ function Vinyler() {
           />
         </div>
         <div className="vinyl-wrapper">
+          {filteredVinyls.length === 0 ? (
+            <p>Der er ingen plader der matcher dine filtre</p>
+          ) : null}
           {filteredVinyls.map((vinyl) => (
             <Link
               to={`/produkter/vinyler/${vinyl.id}`}
