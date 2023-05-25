@@ -5,6 +5,7 @@ import Nav from "../components/Nav";
 import TopNav from "../components/TopNav";
 import CenterNav from "../components/CenterNav";
 import Footer from "../components/Footer";
+import VinylSearch from "../components/VinylSearch";
 function RootLayout() {
   //Denne funktion er vores Root layout, det vi vil have skal
   //gælde på alle sider. Her styrer vi også
@@ -114,7 +115,7 @@ function RootLayout() {
                 </button>
               </div>
               <div className="sogefelt-wrapper">
-                <div className="mobil-sogefelt"></div>
+                <VinylSearch></VinylSearch>
               </div>
 
               {isOpen && (

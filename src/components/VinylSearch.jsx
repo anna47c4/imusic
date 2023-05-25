@@ -70,32 +70,38 @@ function VinylSearch() {
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Søg efter vinyler"
-        value={searchTerm}
-        onChange={handleSearchChange}
-        onKeyUp={(e) => showSuggestions(e.target.value)}
-      />
-      <button onClick={performSearch}>Søg</button>
+    <div className="vinyl-search-container ">
+      <div className="input-og-btn">
+        <input
+          type="text"
+          placeholder="Søg efter..."
+          value={searchTerm}
+          onChange={handleSearchChange}
+          onKeyUp={(e) => showSuggestions(e.target.value)}
+          className="search-input"
+        />
+        <button className="search-button" onClick={performSearch}>
+          SØG
+        </button>
+      </div>
 
       {/* Vis forslag, som liner til den konkrte vinyl */}
-
-      {suggestions.map((vinyl) => (
-        <Link
-          onClick={clearSearch}
-          to={`/produkter/vinyler/${vinyl.id}`}
-          key={vinyl.id}
-          className="vinyl"
-        >
-          <ul key={vinyl.id}>
-            <li key={vinyl.id}>
-              {vinyl.titel} - {vinyl.kunstner}
-            </li>
-          </ul>
-        </Link>
-      ))}
+      <div className="forslag">
+        {suggestions.map((vinyl) => (
+          <Link
+            onClick={clearSearch}
+            to={`/produkter/vinyler/${vinyl.id}`}
+            key={vinyl.id}
+            className="suggestions-list"
+          >
+            <ul className="suggestion-item " key={vinyl.id}>
+              <li key={vinyl.id}>
+                {vinyl.titel} - {vinyl.kunstner}
+              </li>
+            </ul>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

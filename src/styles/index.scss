@@ -40,6 +40,65 @@ p {
   font-style: $font-style-italic;
   font-size: $font-s-p;
 }
+//søgefelt
+/* .vinyl-search-container {
+} */
+
+.input-og-btn {
+  display: flex;
+  align-items: baseline;
+  margin: 0 20px 20px 20px;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.forslag {
+  display: flex;
+  flex-direction: column;
+  a {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      li {
+        padding: 5px;
+        color: $steelblue;
+        margin-left: 25px;
+        font-weight: $font-weight-semib;
+      }
+    }
+  }
+}
+
+.search-input {
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 10px;
+  width: 100%;
+  border: 0.5px solid black;
+  margin-bottom: 10px;
+}
+.search-input:active {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0.5px solid $bloodorange;
+}
+.search-button {
+  background-color: $offwhite;
+  border: 0.5px solid black;
+  padding-top: 7px;
+  padding-bottom: 10px;
+  /*   background-image: url("../assets/svg/search_FILL0_wght400_GRAD0_opsz48.svg");
+  background-position: center;
+  background-size: cover; */
+  cursor: pointer;
+}
+
+/* .suggestions-list {
+}
+
+.suggestion-item {
+} */
 
 ////////////////////////////////////////////////////////////////////////
 //
