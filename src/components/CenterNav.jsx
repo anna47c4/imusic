@@ -1,7 +1,8 @@
 //asset import
 import logoSort from "../assets/svg/logo_sort.svg";
 //component import
-import SogeFelt from "./SogeFelt";
+/* import SogeFelt from "./SogeFelt"; */
+import VinylSearch from "./VinylSearch";
 //react imports
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -43,7 +44,7 @@ function CenterNav() {
               ></img>
             </div>
             <div className="wrapper">
-              <SogeFelt></SogeFelt>
+              <VinylSearch></VinylSearch>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="38"
