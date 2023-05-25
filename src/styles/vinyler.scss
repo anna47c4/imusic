@@ -125,6 +125,9 @@
 //wrapper for single page indhold
 .vinyl-details {
   margin: 25px;
+  @media (min-width: 1240px) {
+    margin: 0;
+  }
   //single view section
   .single-view-section {
     background-color: $softsmoke;
@@ -224,6 +227,7 @@
       //Læs mere - description tekst omkring valgte vinyl
       .read-more {
         padding-bottom: 30px;
+        cursor: pointer;
         p {
           line-height: 24px;
           @media (min-width: 762px) {
@@ -241,7 +245,7 @@
       .cta-btn {
         margin-bottom: 30px;
         @media (min-width: 762px) {
-          margin-bottom: 91px;
+          margin-bottom: 50px;
         }
       }
     }
