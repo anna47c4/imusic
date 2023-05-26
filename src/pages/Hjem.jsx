@@ -47,7 +47,7 @@ function Hjem() {
             <Button
               className={"cta-btn"}
               clickAction={goToVinyler}
-              desc={"VINYLER"}
+              desc={"SE KAMPAGNE"}
             ></Button>
           </div>
         </div>

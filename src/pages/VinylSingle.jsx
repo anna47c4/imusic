@@ -174,6 +174,12 @@ function VinylSingle() {
                   >
                     <p>Medie: {selectedVinyl.medie}</p>
                     <hr></hr>
+                    {selectedVinyl.antal_lp && (
+                      <>
+                        <p>Antal: {selectedVinyl.antal_lp}</p>
+                        <hr></hr>
+                      </>
+                    )}
                     <p>Udgivet: {selectedVinyl.udgivet}</p>
                     <hr></hr>
                     <p>EAN / UPC: {selectedVinyl.ean_upc}</p>
@@ -351,6 +357,12 @@ function VinylSingle() {
                   <Collapsible label="Produktdetaljer">
                     <p>Medie: {selectedVinyl.medie}</p>
                     <hr></hr>
+                    {selectedVinyl.antal_lp && (
+                      <>
+                        <p>Antal: {selectedVinyl.antal_lp}</p>
+                        <hr></hr>
+                      </>
+                    )}
                     <p>Udgivet: {selectedVinyl.udgivet}</p>
                     <hr></hr>
                     <p>EAN / UPC: {selectedVinyl.ean_upc}</p>
