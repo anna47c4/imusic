@@ -120,6 +120,7 @@ function Footer() {
                     name="email"
                     className="footer-input"
                     id="email"
+                    placeholder="Din e-mail"
                   ></input>
                   <button type="submit">TILMELD</button>
                 </div>
