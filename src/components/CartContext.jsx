@@ -33,9 +33,14 @@ const CartContextProvider = ({ children }) => {
     setIsInCart(true);
   }
 
+  function emptyCart() {
+    setIsInCart(false);
+  }
+
   const cartContextValue = {
     isInCart,
     addToCart,
+    emptyCart,
   };
 
   return (
