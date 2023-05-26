@@ -93,66 +93,67 @@ function Vinyler() {
     <>
       <main>
         <h1>Nye & kommende vinyludgivelser</h1>
+        <div className="filter-btn-wrapper">
+          <div className="filter-wrapper-genre">
+            <Button
+              className={selectedGenre === "Alle" ? "active" : ""}
+              clickAction={() => {
+                handleGenreFilter("Alle");
 
-        <div className="filter-wrapper-genre">
-          <Button
-            className={selectedGenre === "Alle" ? "active" : ""}
-            clickAction={() => {
-              handleGenreFilter("Alle");
+                setShowOnlyNyheder(false);
+                setShowOnlyFarvetVinyl(false);
+              }}
+              desc="ALLE"
+            />
+            <Button
+              className={selectedGenre === "Rock" ? "active" : ""}
+              clickAction={() => handleGenreFilter("Rock")}
+              desc="ROCK"
+            />
+            <Button
+              className={selectedGenre === "Pop" ? "active" : ""}
+              clickAction={() => handleGenreFilter("Pop")}
+              desc="POP"
+            />
 
-              setShowOnlyNyheder(false);
-              setShowOnlyFarvetVinyl(false);
-            }}
-            desc="Alle"
-          />
-          <Button
-            className={selectedGenre === "Rock" ? "active" : ""}
-            clickAction={() => handleGenreFilter("Rock")}
-            desc="Rock"
-          />
-          <Button
-            className={selectedGenre === "Pop" ? "active" : ""}
-            clickAction={() => handleGenreFilter("Pop")}
-            desc="Pop"
-          />
+            <Button
+              className={selectedGenre === "Metal" ? "active" : ""}
+              clickAction={() => handleGenreFilter("Metal")}
+              desc="METAL"
+            />
 
-          <Button
-            className={selectedGenre === "Metal" ? "active" : ""}
-            clickAction={() => handleGenreFilter("Metal")}
-            desc="Metal"
-          />
+            <Button
+              className={selectedGenre === "Country" ? "active" : ""}
+              clickAction={() => handleGenreFilter("Country")}
+              desc="COUNTRY"
+            />
 
-          <Button
-            className={selectedGenre === "Country" ? "active" : ""}
-            clickAction={() => handleGenreFilter("Country")}
-            desc="Country"
-          />
+            <Button
+              className={selectedGenre === "Soundtrack" ? "active" : ""}
+              clickAction={() => handleGenreFilter("Soundtrack")}
+              desc="SOUNDTRACK"
+            />
 
-          <Button
-            className={selectedGenre === "Soundtrack" ? "active" : ""}
-            clickAction={() => handleGenreFilter("Soundtrack")}
-            desc="Soundtrack"
-          />
+            <Button
+              className={selectedGenre === "Skandinavisk" ? "active" : ""}
+              clickAction={() => handleGenreFilter("Skandinavisk")}
+              desc="SKANDINAVISK"
+            />
 
-          <Button
-            className={selectedGenre === "Skandinavisk" ? "active" : ""}
-            clickAction={() => handleGenreFilter("Skandinavisk")}
-            desc="Skandinavisk"
-          />
+            <div className="filter-wrapper-other"></div>
+            <Button
+              className={showOnlyNyheder ? "active" : ""}
+              clickAction={handleNyhederFilter}
+              desc="NYHEDER"
+            />
+            <Button
+              className={showOnlyFarvetVinyl ? "active" : ""}
+              clickAction={handleFarvetVinylFilter}
+              desc="FARVET VINYL"
+            />
+          </div>
         </div>
 
-        <div className="filter-wrapper-other">
-          <Button
-            className={showOnlyNyheder ? "active" : ""}
-            clickAction={handleNyhederFilter}
-            desc="Kun Nyheder"
-          />
-          <Button
-            className={showOnlyFarvetVinyl ? "active" : ""}
-            clickAction={handleFarvetVinylFilter}
-            desc="Farvet Vinyl"
-          />
-        </div>
         <div className="vinyl-wrapper">
           {filteredVinyls.length === 0 ? (
             <p>Der er ingen plader der matcher dine filtre</p>

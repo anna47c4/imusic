@@ -2,16 +2,37 @@
 
 /* VINYL SIDE */
 //filtreringsknapper / menu
-.filter-wrapper-genre {
-  .active {
-    color: $bloodorange;
+.filter-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  button {
+    width: 140px;
+    height: 36px;
+    /*     border: 5px solid $bloodorange; */
+    border: 0.5px solid black;
+    filter: drop-shadow(1px 4px 6px rgba(0, 0, 0, 0.2));
+    background-color: transparent;
   }
-}
-.filter-wrapper-other {
   .active {
-    color: $bloodorange;
+    border: 5px solid $bloodorange;
   }
+  .filter-wrapper-genre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* .filter-wrapper-other {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    justify-content: center;
+    .active {
+      color: $bloodorange;
+    }
+  } */
 }
+
 //container der holder vinylprodukter
 .vinyl-wrapper {
   display: flex;

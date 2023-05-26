@@ -79,11 +79,16 @@ p {
   border: 0.5px solid black;
   /*   margin-bottom: 10px; */
 }
-.search-input:active {
+.search-input:focus {
+  /*   border-color: $bloodorange; */
+  outline: 0.5px solid $bloodorange;
+}
+/* .search-input:focus {
   -webkit-appearance: none;
   appearance: none;
   border: 0.5px solid $bloodorange;
-}
+} */
+
 .search-button {
   background-color: $offwhite;
   border: 0.5px solid black;
