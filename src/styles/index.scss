@@ -21,6 +21,7 @@ main {
 
 a {
   text-decoration: none;
+  color: $coal;
 }
 button {
   border: none;
@@ -66,14 +67,8 @@ p {
   /*   margin-bottom: 10px; */
 }
 .search-input:focus {
-  /*   border-color: $bloodorange; */
   outline: 0.5px solid $bloodorange;
 }
-/* .search-input:focus {
-  -webkit-appearance: none;
-  appearance: none;
-  border: 0.5px solid $bloodorange;
-} */
 
 .search-button {
   background-color: $offwhite;
@@ -278,6 +273,7 @@ p {
   margin: 0;
   padding-bottom: 50px;
   margin-bottom: 50px;
+  background-image: url("../assets/svg/imusicpattern.svg");
   h3 {
     padding-top: 50px;
     margin: 50px;
@@ -323,19 +319,16 @@ p {
 //flueben wrapper
 .ico-wrapper {
   display: flex;
-  justify-content: center;
-  padding-top: 8px;
+  align-items: center;
+  gap: 6px;
   @media (min-width: 762px) {
-    display: flex;
-    justify-content: flex-start;
   }
-
-  img {
-    width: 70px;
-    height: 70px;
+  img.flueben {
+    width: 30px;
+    height: 30px;
   }
 }
-
+/* */
 ////////////////////////////////////////////////////
 /* GAVEKORT PAGE */
 .gift-card-form {
@@ -430,21 +423,40 @@ p {
   background-image: url(../assets/svg/soundwave_1920X1080.svg);
   background-size: cover;
   background-position: center;
+  padding-bottom: 100px;
+  @media (min-width: 762px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .video-fig-wrapper {
+    figcaption {
+      margin: 25px;
+      padding-top: 25px;
+      color: $offwhite;
+      font-size: $font-s-lille-p;
+    }
+    padding-top: 50px;
+  }
   //tekst i herosektion
   .hero-txt {
     color: $offwhite;
-    margin: 25px;
-    /*   padding-top: 50px; */
-    padding-bottom: 50px;
+    @media (min-width: 762px) {
+      padding-top: 110px;
+    }
     h1 {
       font-size: $font-s-h1-mob;
       line-height: 31px;
+      margin: 25px;
+    }
+    p {
+      margin: 25px;
     }
     //herosektion CTA ('deltg') knap
     .cta-btn-wrapper {
       display: flex;
       justify-content: center;
       padding-top: 25px;
+      margin: 25px;
       //desktop tilpasning
       @media (min-width: 762px) {
         justify-content: flex-start;
@@ -584,12 +596,10 @@ p {
 } */
 .video-container {
   margin: 25px;
-  margin-top: 40px;
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 20px !important; /* Forholdsmæssig højde (16:9) */
-  height: 0;
   overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
 }
 
 .video-container iframe {

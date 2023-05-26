@@ -68,9 +68,10 @@ function Hjem() {
           <div className="shop-card-wrapper">
             <div className="shop-card">
               <div className="ico-wrapper">
-                <img src={flueBen} alt="flueben i cirkel" />
+                <h4>Nordens største udvalg</h4>
+                <img src={flueBen} className="flueben" alt="flueben i cirkel" />
               </div>
-              <h4>Nordens største udvalg</h4>
+
               <p>
                 iMusic er Nordens største musikforhandler med 7.340.000 titler
                 til lave priser · Kæmpe udvalg af nyt og kommende materiale
@@ -79,9 +80,9 @@ function Hjem() {
 
             <div className="shop-card">
               <div className="ico-wrapper">
-                <img src={flueBen} alt="flueben i cirkel" />
+                <h4>Fri fragt v. DKK 699,00</h4>
+                <img src={flueBen} className="flueben" alt="flueben i cirkel" />
               </div>
-              <h4>Fri fragt v. DKK 699,00</h4>
               <p>
                 Få gratis fragt til pakkeshop ved køb for DKK 699,00 (i
                 Danmark). Gælder ikke ved køb af gavekort.
@@ -90,9 +91,9 @@ function Hjem() {
 
             <div className="shop-card">
               <div className="ico-wrapper">
-                <img src={flueBen} alt="flueben i cirkel" />
+                <h4>Godkendt</h4>
+                <img src={flueBen} className="flueben" alt="flueben i cirkel" />
               </div>
-              <h4>Godkendt</h4>
               <p>
                 Topvurdering på Trustpilot og Google-anmeddelser. Medlem af
                 Dansk Erhverv - Digital Handel.
@@ -101,9 +102,9 @@ function Hjem() {
 
             <div className="shop-card">
               <div className="ico-wrapper">
-                <img src={flueBen} alt="flueben i cirkel" />
+                <h4>God service</h4>{" "}
+                <img src={flueBen} className="flueben" alt="flueben i cirkel" />
               </div>
-              <h4>God service</h4>
               <p>
                 Personlig kundeservice, der er til at tale med. Hurtig
                 responstid, vores kunder er vores første prioritet.
