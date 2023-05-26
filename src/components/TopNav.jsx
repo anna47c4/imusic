@@ -1,6 +1,6 @@
 //asset imports
-import dkk from "../assets/svg/dkk.svg";
-import flag from "../assets/svg/flag.svg";
+import dkk from "../assets/svg/dkk_1.svg";
+import flag from "../assets/svg/flag_2.svg";
 //top navigation med usp linje, bruger ikon, valuta,og sprog
 function TopNav() {
   return (

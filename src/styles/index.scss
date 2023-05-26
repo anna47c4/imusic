@@ -47,7 +47,7 @@ p {
 
 .input-og-btn {
   display: flex;
-  align-items: baseline;
+  /*   align-items: baseline; */
   margin: 0 20px 20px 20px;
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
 }
@@ -77,7 +77,7 @@ p {
   padding: 10px;
   width: 100%;
   border: 0.5px solid black;
-  margin-bottom: 10px;
+  /*   margin-bottom: 10px; */
 }
 .search-input:active {
   -webkit-appearance: none;
@@ -87,7 +87,7 @@ p {
 .search-button {
   background-color: $offwhite;
   border: 0.5px solid black;
-  padding-top: 7px;
+  padding-top: 10px;
   padding-bottom: 10px;
   /*   background-image: url("../assets/svg/search_FILL0_wght400_GRAD0_opsz48.svg");
   background-position: center;
