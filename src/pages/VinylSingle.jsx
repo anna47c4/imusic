@@ -162,12 +162,24 @@ function VinylSingle() {
                     )}
                   </div>
 
+                  {isInCart && (
+                    <div className="feedback-msg-kurv">
+                      <p>
+                        Varen er tilføjet til kurven!<br></br>
+                        <span>
+                          Du kan fjerne produktet fra kurven igen, ved at trykke
+                          <br></br>
+                          på kurv ikonet i navigationen.
+                        </span>
+                      </p>
+                    </div>
+                  )}
+
                   <Button
                     className={"cta-btn"}
                     desc={"LÆG I KURV"}
                     clickAction={handleAddToCart}
                   ></Button>
-                  {isInCart && <p>Varen er tilføjet til kurven!</p>}
                   <Collapsible
                     label="Produktdetaljer"
                     className="collapsible-top-1"
@@ -349,6 +361,18 @@ function VinylSingle() {
                     )}
                   </div>
 
+                  {isInCart && (
+                    <div className="feedback-msg-kurv">
+                      <p>
+                        Varen er tilføjet til kurven!<br></br>
+                        <span>
+                          Du kan fjerne produktet fra kurven igen, ved at trykke
+                          <br></br>
+                          på kurv ikonet i navigationen.
+                        </span>
+                      </p>
+                    </div>
+                  )}
                   <Button
                     className={"cta-btn"}
                     desc={"LÆG I KURV"}

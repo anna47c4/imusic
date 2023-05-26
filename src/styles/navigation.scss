@@ -118,17 +118,6 @@
         color: black;
         margin-bottom: 8px;
       }
-      //mobil søge felt placeholder
-      .sogefelt-wrapper {
-        display: flex;
-        justify-content: center;
-        .mobil-sogefelt {
-          height: 2rem;
-          width: 8rem;
-          border: 1px solid black;
-          margin-bottom: 5px;
-        }
-      }
     }
   }
   //burger button
@@ -192,7 +181,12 @@
   //brødkrummer
   .breadcrumbs {
     max-width: 1240px;
-    margin: 20px auto;
+    margin: 25px 25px 50px 25px;
+    @media (min-width: 1240px) {
+      margin: auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
   }
   //alle brødkrummer inside placere sig inline-block
   .breadcrumbs > * {
@@ -210,6 +204,8 @@
   }
   .krumme {
     color: $coal;
+    font-style: $font-style-italic;
+    font-size: $font-s-p;
   }
   .krumme:hover {
     color: $bloodorange;

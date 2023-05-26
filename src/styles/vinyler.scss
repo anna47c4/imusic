@@ -1,6 +1,14 @@
 @import "partials/variables";
 
 /* VINYL SIDE */
+//overskrift
+h1 {
+  margin: 25px;
+  @media (min-width: 1240px) {
+    margin: auto;
+    margin-bottom: 25px;
+  }
+}
 //filtreringsknapper / menu
 .toggle-filter-knapper {
   /*   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2); */
@@ -266,6 +274,21 @@
           color: $steelgrey;
         }
       }
+      //fedback besked når item lagt i kurv
+      .feedback-msg-kurv {
+        border: 0.5px solid $coal;
+        padding: 10px;
+        margin-bottom: 10px;
+        p {
+          font-size: $font-s-p;
+          font-style: $font-style-italic;
+          color: $bloodorange;
+          span {
+            color: $coal;
+            font-size: $font-s-lille-p;
+          }
+        }
+      }
       //Læg i indkøbskurv
       .cta-btn {
         margin-bottom: 30px;
@@ -345,4 +368,8 @@
 
 .content-show {
   height: 200px;
+}
+.next-page-btn-box {
+  display: flex;
+  justify-content: center;
 }

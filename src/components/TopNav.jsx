@@ -3,9 +3,12 @@ import dkk from "../assets/svg/dkk_1.svg";
 import flag from "../assets/svg/flag_2.svg";
 //top navigation med usp linje, bruger ikon, valuta,og sprog
 function TopNav() {
+  const handleClick = () => {
+    alert("Denne topmenu's indhold, er ikke funktionelt.");
+  };
   return (
     <>
-      <div className="top-nav">
+      <div className="top-nav" onClick={handleClick}>
         <div className="usp-linje left">
           <p>Fri fragt ved køb over 699,-</p>
           <p>Alt i Vinyl, CD & Film</p>

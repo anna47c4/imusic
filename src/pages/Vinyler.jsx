@@ -8,6 +8,7 @@ import { VinylDataContext } from "../components/VinylDataContext";
 import Button from "../components/Button";
 //Styles
 import "../styles/vinyler.scss";
+import NextPageSimulationBtn from "../components/NextPageSimulationBtn";
 
 function Vinyler() {
   //useEffect der sørger for at sende vinduet til tops når siden renders
@@ -283,6 +284,7 @@ function Vinyler() {
             </Link>
           ))}
         </div>
+        <NextPageSimulationBtn></NextPageSimulationBtn>
       </main>
     </>
   );
