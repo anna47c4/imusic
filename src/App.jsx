@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 //Stylesheet imports
 import "./styles/index.scss";
 import "./styles/navigation.scss";
@@ -22,6 +22,7 @@ import ErrorPage from "./pages/ErrorPage";
 import RootLayout from "./layouts/RootLayout";
 import Nav from "./components/Nav";
 import Vinyler from "./pages/Vinyler";
+import { CartContext, CartContextProvider } from "./components/CartContext";
 //import af databse fil fra module mappe
 import { getData } from "./modules/db";
 import {
@@ -56,6 +57,7 @@ const router = createBrowserRouter(routes);
 
 function App() {
   const [vinylData, setVinylData] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -70,17 +72,23 @@ function App() {
     fetchData();
   }, []);
 
+  //kurv test
+  const cartContext = useContext(CartContext);
+  // Udpak kontekstobjektets værdier
+
   //App funktionen er den der sørger for
   //at køre alle vores Routes, og deres tilhørende indhold.
   //Elementer eller funktioner der er i App, gør sig
   //gældende på alle sider.
   return (
     <>
-      <VinylDataContext.Provider value={vinylData}>
-        <RouterProvider router={router}>
-          <Route path="/" element={<Nav />} /> {/* Tilføjet denne linje */}
-        </RouterProvider>
-      </VinylDataContext.Provider>
+      <CartContextProvider value={cartContext}>
+        <VinylDataContext.Provider value={vinylData}>
+          <RouterProvider router={router}>
+            <Route path="/" element={<Nav />} /> {/* Tilføjet denne linje */}
+          </RouterProvider>
+        </VinylDataContext.Provider>
+      </CartContextProvider>
     </>
   );
 }

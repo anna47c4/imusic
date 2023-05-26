@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 //vinyldata import
 import { VinylDataContext } from "../components/VinylDataContext";
+import { CartContext } from "../components/CartContext";
 //component imports
 import Button from "../components/Button";
 import Collapsible from "../components/Collapsible";
@@ -17,6 +18,19 @@ function VinylSingle() {
   const [visLæsMere, setVisLæsMere] = useState(false); //starter som false, fordi vi ikke vil have teksten vist før brugeren klikker
   //state der detecter om skærmen er desktop eller ikke, og det bruger vi senere i vores return statement til at afgøre, hvilken html struktur vi vil have vist
   const [isDesktop, setIsDesktop] = useState(false);
+  //basket test
+
+  /*   const { isInCart, addToCart } = useContext(CartContext); */
+  const cartContext = useContext(CartContext);
+  const { isInCart, addToCart } = cartContext || {};
+  console.log({ cartContext });
+  const handleAddToCart = () => {
+    console.log("handleAddToCart blev kaldt");
+    if (addToCart) {
+      addToCart(); // Kald addToCart-funktionen fra CartContext
+    }
+  };
+
   //useEffect til at tjekke skærmstørrelsen
   useEffect(() => {
     const checkScreenSize = () => {
@@ -148,7 +162,12 @@ function VinylSingle() {
                     )}
                   </div>
 
-                  <Button className={"cta-btn"} desc={"LÆG I KURV"}></Button>
+                  <Button
+                    className={"cta-btn"}
+                    desc={"LÆG I KURV"}
+                    clickAction={handleAddToCart}
+                  ></Button>
+                  {isInCart && <p>Varen er tilføjet til kurven!</p>}
                   <Collapsible
                     label="Produktdetaljer"
                     className="collapsible-top-1"
@@ -324,7 +343,11 @@ function VinylSingle() {
                     )}
                   </div>
 
-                  <Button className={"cta-btn"} desc={"LÆG I KURV"}></Button>
+                  <Button
+                    className={"cta-btn"}
+                    desc={"LÆG I KURV"}
+                    clickAction={handleAddToCart}
+                  ></Button>
                   <Collapsible label="Produktdetaljer">
                     <p>Medie: {selectedVinyl.medie}</p>
                     <hr></hr>
