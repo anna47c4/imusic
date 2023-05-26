@@ -19,7 +19,10 @@ function Godepriser() {
         {/*  <div className="top-vid">
         
         </div> */}
-        <YoutubeEmbed embedId="KPkpHKR4"></YoutubeEmbed>
+        <figcaption className="video-anbefaling">
+          <em>Anbefalet: Sæt vidoen til HD</em>
+        </figcaption>
+        <YoutubeEmbed embedId="l2_KPkpHKR4"></YoutubeEmbed>
         <div className="hero-txt hero-btn">
           <h1>
             Spar penge på vinyler med en kampagnekode på 15% rabat til dit næste
