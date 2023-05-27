@@ -15,6 +15,9 @@ function Godepriser() {
   function goToVinyler() {
     navigate("../produkter/vinyler");
   }
+  function goToNoPage() {
+    navigate("../errorpage");
+  }
   //herunder har vi vores return statement, som
   //giver os det indhold, vi viser i vores frontend
   return (
@@ -44,11 +47,7 @@ function Godepriser() {
               target="_blank"
               rel="noreferrer"
             >
-              <Button
-                className={"cta-btn"}
-                clickAction={goToVinyler}
-                desc={"DELTAG"}
-              ></Button>
+              <Button className={"cta-btn"} desc={"DELTAG"}></Button>
             </a>
           </div>
         </div>
@@ -65,11 +64,19 @@ function Godepriser() {
           <div className="tilbud-wrapper">
             <div className="vinyl-tilbud">
               <h3>GODE TILBUD PÅ VINYLER LIGE NU!</h3>
-              <Button className={"cat-btn"} desc={"TJEK TILBUD"}></Button>
+              <Button
+                className={"cat-btn"}
+                desc={"TJEK TILBUD"}
+                clickAction={goToVinyler}
+              ></Button>
             </div>
             <div className="kpop-tilbud">
               <h3>GODE TILBUD PÅ K-POP LIGE NU!</h3>
-              <Button className={"cat-btn"} desc={"TJEK TILBUD"}></Button>
+              <Button
+                className={"cat-btn"}
+                desc={"TJEK TILBUD"}
+                clickAction={goToNoPage}
+              ></Button>
             </div>
           </div>
         </section>

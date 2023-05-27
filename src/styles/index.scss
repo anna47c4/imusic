@@ -432,34 +432,46 @@ p {
   background-size: cover;
   background-position: center;
   padding-bottom: 100px;
-  @media (min-width: 762px) {
+  @media (min-width: 1240px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
   .video-fig-wrapper {
+    @media (min-width: 1240px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
     figcaption {
-      margin: 25px;
       padding-top: 25px;
       color: $offwhite;
       font-size: $font-s-lille-p;
     }
     padding-top: 50px;
+    @media (min-width: 762px) {
+      margin-left: 100px;
+      padding-top: 100px;
+    }
   }
   //tekst i herosektion
   .hero-txt {
     color: $offwhite;
     @media (min-width: 762px) {
       padding-top: 110px;
+      margin: 100px;
     }
     h1 {
       font-size: $font-s-h1-mob;
       line-height: 31px;
-      margin: 25px;
     }
     p {
       margin: 25px;
+      @media (min-width: 762px) {
+        margin: 0;
+      }
     }
-    //herosektion CTA ('deltg') knap
+
+    //herosektion CTA ('deltag') knap
     .cta-btn-wrapper {
       display: flex;
       justify-content: center;
@@ -468,6 +480,7 @@ p {
       //desktop tilpasning
       @media (min-width: 762px) {
         justify-content: flex-start;
+        margin: 0;
       }
     }
   }
@@ -603,7 +616,6 @@ p {
   position: absolute;
 } */
 .video-container {
-  margin: 25px;
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
