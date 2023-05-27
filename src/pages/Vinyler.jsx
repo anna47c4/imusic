@@ -32,19 +32,9 @@ function Vinyler() {
   const [showOnlyFarvetVinyl, setShowOnlyFarvetVinyl] = useState(false); //vis kun farvede vinyler starter med at være falsk
   /*   const [isFiltering, setIsFiltering] = useState(false); */ //state der skal undersøge, hvorvidt der foregår en filtrering eller ej
 
-  //TEST
-  /*   // Første trin: Split genrerne
-  const genrer = vinylData.genre.split(", "); // Antager, at genrer er adskilt af komma
-
-  // Andet trin: Opret et nyt array med hver genre som en separat post
-  const alleGenre = genrer.map((genre) => genre.trim()); // Fjerner eventuelle ekstra mellemrum
-
-  // Tredje trin: Pushe den nye data ind i vinylData igen
-  vinylData.genrer = alleGenre;
-  console.log(vinylData.alleGenre); */
-
   //i denne useEffect tjekker vi at vi rent faktisk har dataen før,
   //vi begynder at filtrere på det
+  //TEST MED VINYLDATAS NAVN
   useEffect(() => {
     if (vinylData && vinylData.length > 0) {
       const filteredVinyls = filterVinyls(
