@@ -18,8 +18,11 @@ function Hjem() {
   //useNavigate, vi opsætter en navigation til vinylsiden,
   //og kobler funktionen på vores knap
   const navigate = useNavigate();
-  function goToVinyler() {
+  /*   function goToVinyler() {
     navigate("../produkter/vinyler");
+  } */
+  function goToGodePriser() {
+    navigate("../godepriser");
   }
   //herunder har vi vores return statement, hvor vi
   //får det indhold ud, vi viser i vores frontend
@@ -46,7 +49,7 @@ function Hjem() {
           <div className="cta-btn-wrapper">
             <Button
               className={"cta-btn"}
-              clickAction={goToVinyler}
+              clickAction={goToGodePriser}
               desc={"SE KAMPAGNE"}
             ></Button>
           </div>

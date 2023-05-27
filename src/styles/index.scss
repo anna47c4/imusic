@@ -96,11 +96,11 @@ p {
   margin: 0;
   padding: 0;
   max-width: 100%;
-  height: 800px;
   background-color: $coal;
   background-image: url("../assets/svg/soundwave_1920X1080.svg");
   background-size: cover;
   background-repeat: none;
+  padding-bottom: 100px;
   //desktop tilpasning af layout
   @media (min-width: 762px) {
     display: grid;
@@ -122,7 +122,9 @@ p {
   }
   //hersection tekst
   .hero-txt {
-    margin: 50px;
+    @media (min-width: 762px) {
+      margin-right: 50px;
+    }
     h1 {
       font-size: $font-s-h1-mob;
       color: $offwhite;
@@ -130,6 +132,10 @@ p {
     p {
       font-size: $font-s-p;
       color: $offwhite;
+      margin: 25px;
+      @media (min-width: 762px) {
+        margin: 0;
+      }
     }
   }
   //herosection call to action btn (Vinyler)
@@ -139,6 +145,8 @@ p {
     //desktop tilpasning
     @media (min-width: 762px) {
       justify-content: flex-start;
+      margin-right: 50px;
+      margin-top: 25px;
     }
   }
 }

@@ -1,9 +1,12 @@
 //react imports
-import { useState } from "react";
+import { useState, useEffect } from "react";
 //component imports
 import Button from "../components/Button";
 
 function GiftCardForm() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   //forskellige states til vores felter i formen
   const [amount, setAmount] = useState("");
   const [name, setName] = useState("");

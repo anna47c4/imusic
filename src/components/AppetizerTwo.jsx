@@ -7,8 +7,8 @@ import pladeSpiller from "../assets/img/pladespiller.webp";
 function AppetizerTwo() {
   //navigate function, vi kobler på vores cta btn
   const navigate = useNavigate();
-  function goToVinyler() {
-    navigate("../produkter/vinyler");
+  function goToAudio() {
+    navigate("../errorpage");
   }
   return (
     <>
@@ -31,7 +31,7 @@ function AppetizerTwo() {
             <Button
               className={"cta-btn"}
               desc={"AUDIO & HIFI"}
-              clickAction={goToVinyler}
+              clickAction={goToAudio}
             ></Button>
           </div>
         </div>

@@ -3,8 +3,12 @@ import Button from "../components/Button";
 import FastLavPris from "../components/FastLavPris";
 //react imports
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import YoutubeEmbed from "../components/YoutubeEmbed";
 function Godepriser() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   //vi opsætter en vej til vinyl siden, og
   //kobler funktionen på vores knap
   const navigate = useNavigate();

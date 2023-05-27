@@ -15,14 +15,8 @@ function UdvalgteKategorier() {
   function goToVinyler() {
     navigate("./produkter/vinyler");
   }
-  function goToCd() {
-    navigate("./produkter/cd");
-  }
-  function goToFilm() {
-    navigate("./produkter/film");
-  }
-  function goToBog() {
-    navigate("./produkter/boger");
+  function goToNoPage() {
+    navigate("./errorpage");
   }
   //herunder har vi vores return statement, som giver os det indhold
   //vi ønsker at vise i vores frontend
@@ -60,7 +54,7 @@ function UdvalgteKategorier() {
           <div className="btn-wrapper">
             <Button
               className={"cat-btn"}
-              clickAction={goToCd}
+              clickAction={goToNoPage}
               desc={"CD'ER"}
             ></Button>
           </div>
@@ -77,7 +71,7 @@ function UdvalgteKategorier() {
           <div className="btn-wrapper">
             <Button
               className={"cat-btn"}
-              clickAction={goToFilm}
+              clickAction={goToNoPage}
               desc={"FILM"}
             ></Button>
           </div>
@@ -94,7 +88,7 @@ function UdvalgteKategorier() {
           <div className="btn-wrapper">
             <Button
               className={"cat-btn"}
-              clickAction={goToBog}
+              clickAction={goToNoPage}
               desc={"BØGER"}
             ></Button>
           </div>
