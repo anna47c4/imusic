@@ -17,6 +17,7 @@ function Vinyler() {
   }, []);
   //opbevaring af vores vinyldata i en const
   const vinylData = useContext(VinylDataContext);
+
   //useState opsat til at styre filtreringen, starter med et tomt array
   const [filteredVinyls, setFilteredVinyls] = useState([]);
 
@@ -30,6 +31,17 @@ function Vinyler() {
   const [showOnlyNyheder, setShowOnlyNyheder] = useState(false); //vis kun nyheder, starter med at være falsk
   const [showOnlyFarvetVinyl, setShowOnlyFarvetVinyl] = useState(false); //vis kun farvede vinyler starter med at være falsk
   /*   const [isFiltering, setIsFiltering] = useState(false); */ //state der skal undersøge, hvorvidt der foregår en filtrering eller ej
+
+  //TEST
+  /*   // Første trin: Split genrerne
+  const genrer = vinylData.genre.split(", "); // Antager, at genrer er adskilt af komma
+
+  // Andet trin: Opret et nyt array med hver genre som en separat post
+  const alleGenre = genrer.map((genre) => genre.trim()); // Fjerner eventuelle ekstra mellemrum
+
+  // Tredje trin: Pushe den nye data ind i vinylData igen
+  vinylData.genrer = alleGenre;
+  console.log(vinylData.alleGenre); */
 
   //i denne useEffect tjekker vi at vi rent faktisk har dataen før,
   //vi begynder at filtrere på det
@@ -49,11 +61,15 @@ function Vinyler() {
   function toggleFilters() {
     setShowFilters(!showFilters);
   }
-
+  /*  if (genre !== "Alle") {
+      const selectedGenres = genre.split(", ").map((g) => g.trim());
+      all = all.filter((vinyl) => selectedGenres.includes(vinyl.genre));
+    } */
   //i denne funktion har vi vores forskellige conditions der tjekker om
   //vinylerne passer med filtreringskravet
   function filterVinyls(vinyls, genre /* nyheder, farvetVinyl */) {
     let all = [...vinyls];
+
     if (genre !== "Alle") {
       all = all.filter((vinyl) => vinyl.genre === genre);
     }
@@ -140,7 +156,7 @@ function Vinyler() {
           {showFilters && (
             <div className="filter-wrapper">
               <Button
-                className={selectedGenre === "Alle" ? "active" : ""}
+                className={`${selectedGenre === "Alle" ? "active" : ""}`}
                 clickAction={() => {
                   handleGenreFilter("Alle");
                   setShowOnlyNyheder(false);
@@ -148,37 +164,51 @@ function Vinyler() {
                 }}
                 desc="ALLE"
               />
+
+              {/*    {vinylData.map((vinyl) => (
+                <Button
+                  key={vinyl.id}
+                  className={`${
+                    selectedGenres.includes(vinyl.genres) ? "selected" : ""
+                  }`}
+                  clickAction={() => handleGenreSelection(vinyl.genres)}
+                  desc={vinyl.genres}
+                />
+              ))} */}
+
               <Button
-                className={selectedGenre === "Rock" ? "active" : ""}
+                className={`${selectedGenre === "Rock" ? "active" : ""}`}
                 clickAction={() => handleGenreFilter("Rock")}
                 desc="ROCK"
               />
               <Button
-                className={selectedGenre === "Pop" ? "active" : ""}
+                className={`${selectedGenre === "Pop" ? "active" : ""}`}
                 clickAction={() => handleGenreFilter("Pop")}
                 desc="POP"
               />
 
               <Button
-                className={selectedGenre === "Metal" ? "active" : ""}
+                className={`${selectedGenre === "Metal" ? "active" : ""}`}
                 clickAction={() => handleGenreFilter("Metal")}
                 desc="METAL"
               />
 
               <Button
-                className={selectedGenre === "Country" ? "active" : ""}
+                className={`${selectedGenre === "Country" ? "active" : ""}`}
                 clickAction={() => handleGenreFilter("Country")}
                 desc="COUNTRY"
               />
 
               <Button
-                className={selectedGenre === "Soundtrack" ? "active" : ""}
+                className={`${selectedGenre === "Soundtrack" ? "active" : ""}`}
                 clickAction={() => handleGenreFilter("Soundtrack")}
                 desc="SOUNDTRACK"
               />
 
               <Button
-                className={selectedGenre === "Skandinavisk" ? "active" : ""}
+                className={`${
+                  selectedGenre === "Skandinavisk" ? "active" : ""
+                }`}
                 clickAction={() => handleGenreFilter("Skandinavisk")}
                 desc="SKANDINAVISK"
               />

@@ -75,6 +75,18 @@ function VinylSingle() {
   if (!selectedVinyl) {
     return <div>Vinylproduktet blev ikke fundet.</div>;
   }
+  // Opdel trackliste i et array af sange
+  const songs = selectedVinyl.trackliste.split(","); //  sange er adskilt af komma
+  // Tilføj linjeskift efter hver sang i tracklisten
+  const formattedSongs = songs.map((song) => (
+    <>
+      {song}
+      <br />
+    </>
+  ));
+  // Opdater selectedVinyl med det opdelte trackliste-array
+  selectedVinyl.songs = formattedSongs;
+
   //herunder har vi vores return statement, hvor vi
   //blandt andet også har nogle conditions (if sætninger, men skrevet på en anden måde)
   //som tjekker og afgør, hvilket indhold der skal returneres
@@ -211,7 +223,7 @@ function VinylSingle() {
                     <p>Genre: {selectedVinyl.genre}</p>
                   </Collapsible>
                   <Collapsible label="Trackliste">
-                    <p>{selectedVinyl.trackliste}</p>
+                    <p>{selectedVinyl.songs}</p>
                   </Collapsible>
                   <Collapsible label="Leveringsoplysninger">
                     <p>
@@ -406,7 +418,7 @@ function VinylSingle() {
                     <p>Genre: {selectedVinyl.genre}</p>
                   </Collapsible>
                   <Collapsible label="Trackliste">
-                    <p>{selectedVinyl.trackliste}</p>
+                    <p>{selectedVinyl.songs}</p>
                   </Collapsible>
                   <Collapsible label="Leveringsoplysninger">
                     <p>
