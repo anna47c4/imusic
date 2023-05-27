@@ -52,6 +52,7 @@ function VinylSingle() {
   const { id } = useParams();
   //herunder opbevarer vi vores importerede vinyldata i en const
   const vinylData = useContext(VinylDataContext);
+
   //her der slicer vi i vores array af data (bruges senere til at vise, 'andre så også' produkterne)
   const limitedProducts = vinylData.slice(7, 11); // Opret en ny array med kun de første 4 produkter
   //console.log til tjekning ift. om dataen er korrekt, og ID'et matcher det klikkede produkt
@@ -66,6 +67,7 @@ function VinylSingle() {
     // Simulerer deling af linket på den valgte platform
     alert(`Simulerer deling på ${platform}`);
   };
+
   // her finder vi det specifikke vinylprodukt baseret på id'et
   const selectedVinyl = vinylData.find((vinyl) => vinyl.id === parseInt(id));
 
