@@ -29,8 +29,9 @@ button {
   font-family: $font-family;
 }
 p {
-  line-height: 24px;
+  line-height: 1.5;
 }
+
 //søgefelt
 .input-og-btn {
   display: flex;
@@ -81,12 +82,6 @@ p {
   cursor: pointer;
 }
 
-/* .suggestions-list {
-}
-
-.suggestion-item {
-} */
-
 ////////////////////////////////////////////////////////////////////////
 //
 //LANDINGPAGE STYLING
@@ -120,6 +115,20 @@ p {
       }
     }
   }
+  @media (min-width: 762px) {
+    .top-img:hover {
+      animation: vinylPlade 5s ease 0s infinite alternate-reverse forwards;
+      @keyframes vinylPlade {
+        0% {
+          transform: rotate(0);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
   //hersection tekst
   .hero-txt {
     @media (min-width: 762px) {
@@ -128,13 +137,18 @@ p {
     h1 {
       font-size: $font-s-h1-mob;
       color: $offwhite;
+      margin: 25px;
+      line-height: 1.21875;
+      @media (min-width: 762px) {
+        margin: 25px 25px 25px 0px;
+      }
     }
     p {
       font-size: $font-s-p;
       color: $offwhite;
       margin: 25px;
       @media (min-width: 762px) {
-        margin: 0;
+        margin: 25px 25px 25px 0px;
       }
     }
   }
@@ -232,8 +246,8 @@ p {
 }
 //tekst container (og den samme container som classerne nedenunder er tilkoblet)
 .store-txt-wrapper {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 //den ene (butik boks) baggrund
 .background1 {
@@ -253,6 +267,9 @@ p {
 .store-txt {
   margin: 50px;
   color: $offwhite;
+  h3 {
+    font-size: $font-s-h2-mob;
+  }
 }
 //den første boks' (butik boksen)
 .appetizer1 {
@@ -280,7 +297,7 @@ p {
   background-color: $softsmoke;
   margin: 0;
   padding-bottom: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   background-image: url("../assets/svg/imusicpattern.svg");
   h3 {
     padding-top: 50px;
@@ -349,11 +366,15 @@ p {
   background-position: center;
   padding-bottom: 100px;
   padding-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+
   h2 {
-    text-align: left;
-    font-size: $font-s-h2-mob;
+    align-self: left;
+    font-size: $font-s-h1-mob;
     color: $offwhite;
+  }
+  .error-message {
+    color: $bloodorange;
   }
 }
 .feedback-message {
@@ -365,10 +386,11 @@ p {
   padding-top: 100px;
   background-color: $coal;
   p {
-    font-size: $font-s-h1-mob;
-    line-height: 34px;
-    color: $offwhite;
+    font-size: $font-s-p;
+    color: $coal;
     margin: 25px;
+    background-color: $softsmoke;
+    padding: 50px;
 
     @media (min-width: 762px) {
       inline-size: 800px;
@@ -406,6 +428,8 @@ p {
   display: flex;
   flex-direction: column;
   margin: 25px;
+  padding: 100px;
+  background-color: $softsmoke;
   div {
     display: flex;
     flex-direction: column;
@@ -414,7 +438,7 @@ p {
 
     label {
       font-weight: bold;
-      color: $offwhite;
+      color: $coal;
     }
     input {
       padding: 8px;
@@ -441,22 +465,44 @@ p {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      margin-left: 100px;
+      padding-top: 100px;
     }
     figcaption {
       padding-top: 25px;
       color: $offwhite;
       font-size: $font-s-lille-p;
+      margin: 25px;
+      @media (min-width: 1240px) {
+        margin: 15px;
+      }
     }
     padding-top: 50px;
     @media (min-width: 762px) {
-      margin-left: 100px;
-      padding-top: 100px;
+    }
+    .video-container {
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      position: relative;
+      height: 0;
+      margin: 25px;
+      @media (min-width: 1240px) {
+        margin: 0;
+      }
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
   //tekst i herosektion
   .hero-txt {
     color: $offwhite;
-    @media (min-width: 762px) {
+    @media (min-width: 1240px) {
       padding-top: 110px;
       margin: 100px;
     }
@@ -467,7 +513,10 @@ p {
     p {
       margin: 25px;
       @media (min-width: 762px) {
-        margin: 0;
+        margin: 25px;
+      }
+      @media (min-width: 1240px) {
+        margin: 0px;
       }
     }
 
@@ -480,7 +529,11 @@ p {
       //desktop tilpasning
       @media (min-width: 762px) {
         justify-content: flex-start;
-        margin: 0;
+        margin: 25px;
+      }
+      @media (min-width: 1240px) {
+        justify-content: flex-start;
+        margin: 0px;
       }
     }
   }
@@ -557,11 +610,10 @@ p {
   //overskrift
   .heading {
     padding-top: 50px;
-    margin: 25px;
     //desktop tilpasning
-    /*   @media (min-width: 762px) {
+    @media (min-width: 1240px) {
       margin: 0;
-    } */
+    }
   }
   //kategori container
   .cat-wrapper {
@@ -615,20 +667,7 @@ p {
   width: 100%;
   position: absolute;
 } */
-.video-container {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-}
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 //////////////////////////////////////
 //Error page
 .error-page {

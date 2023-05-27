@@ -39,7 +39,7 @@ function Godepriser() {
             Brug kampagnekoden ‘IMUSIC15’ ved check-ud. Psssst, forresten vi er
             ikke færdige... Lige nu har vi en konkurrence på vores Instagram{" "}
             <em>imusicdk.</em> Klik ind og deltag du har mulighed for at vinde
-            et gavekort på 1000 dkk, som kan bruges på hele imusic.dk.
+            et gavekort på 1000 kroner, som kan bruges på hele imusic.dk!
           </p>
           <div className="cta-btn-wrapper">
             <a

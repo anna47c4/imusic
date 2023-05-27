@@ -1,43 +1,65 @@
 //react imports
 import { useState, useEffect } from "react";
-//component imports
+//component import
 import Button from "../components/Button";
 
 function GiftCardForm() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  //forskellige states til vores felter i formen
+
   const [amount, setAmount] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [amountError, setAmountError] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Her kan man implementere den nødvendige logik for at behandle formulardataen, f.eks. sende den til en server eller udløse en handling
-    //når formularen er submitted console.logger vi indholdet af den
-    console.log(
-      "Gavekort beløb:",
-      amount,
-      "Købers navn:",
-      name,
-      "Købers email:",
-      email
-    );
-    // Nulstil formularfelterne efter indsendelse
-    setAmount("");
-    setName("");
-    setEmail("");
-    // Simulerer en asynkron operation, f.eks. en API-anmodning
-    /*  setTimeout(() => {
+
+    let isValid = true;
+
+    if (!amount) {
+      setAmountError("Gavekortbeløb er påkrævet");
+      isValid = false;
+    } else {
+      setAmountError("");
+    }
+
+    if (!name) {
+      setNameError("Navn er påkrævet");
+      isValid = false;
+    } else {
+      setNameError("");
+    }
+
+    if (!email) {
+      setEmailError("E-mail er påkrævet");
+      isValid = false;
+    } else {
+      setEmailError("");
+    }
+
+    if (isValid) {
+      console.log(
+        "Gavekort beløb:",
+        amount,
+        "Købers navn:",
+        name,
+        "Købers email:",
+        email
+      );
+
+      setAmount("");
+      setName("");
+      setEmail("");
+
       setIsSubmitted(true);
-    }, 300); */
-    setIsSubmitted(true); //sender feedback besked så snart knap er trykket på
+    }
   };
-  //herunder har vi vores return, som giver os det indhold
-  //vi viser i vores frontend, og så har vi en condition der tjekker
-  //om formen er submitted, hvis ja, så returner den feedback beskeden
+
   return (
     <div>
       {isSubmitted ? (
@@ -67,9 +89,10 @@ function GiftCardForm() {
               <input
                 type="text"
                 id="amount"
-                value={amount.toString()}
-                onChange={(e) => setAmount(parseInt(e.target.value))}
+                value={amount}
+                onChange={(e) => setAmount(e.target.value)}
               />
+              {amountError && <p className="error-message">{amountError}</p>}
             </div>
             <div>
               <label htmlFor="name">Navn:</label>
@@ -79,6 +102,7 @@ function GiftCardForm() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
+              {nameError && <p className="error-message">{nameError}</p>}
             </div>
             <div>
               <label htmlFor="email">E-mail:</label>
@@ -88,6 +112,7 @@ function GiftCardForm() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+              {emailError && <p className="error-message">{emailError}</p>}
             </div>
             <Button
               desc={"KØB GAVEKORT"}
