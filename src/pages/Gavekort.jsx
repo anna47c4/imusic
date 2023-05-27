@@ -82,7 +82,7 @@ function GiftCardForm() {
         </div>
       ) : (
         <div className="gift-card-form">
-          <h2>Køb et gavekort</h2>
+          <h1>Køb et gavekort</h1>
           <form className="gavekort-form" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="amount">Gavekortbeløb i DKK:</label>

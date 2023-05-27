@@ -3,10 +3,13 @@
 /* VINYL SIDE */
 //overskrift
 h1 {
+  font-size: $font-s-h1-mob;
   margin: 25px;
+  line-height: 1.21875;
   @media (min-width: 1240px) {
     margin: auto;
     margin-bottom: 25px;
+    font-size: $font-s-h1-web;
   }
 }
 //filtreringsknapper / menu
@@ -200,9 +203,13 @@ h1 {
         //Titel på album
         h1 {
           font-size: $font-s-h1-mob;
+          line-height: 1.21875;
           padding: 0;
           margin: 0;
           padding-bottom: 20px;
+          @media (min-width: 1240px) {
+            font-size: $font-s-h1-web;
+          }
         }
         //Wrapper der bruges til at sætte farvet vinyl label, ved siden af kunstner navn
         .wrapper {
@@ -213,6 +220,9 @@ h1 {
             color: $steelblue;
             padding-top: 0;
             margin-top: 0;
+            @media (min-width: 1240px) {
+              font-size: $font-s-h2-web;
+            }
           }
           //Farvet vinyl label (placeret i en div)
           .farve {
@@ -248,6 +258,7 @@ h1 {
         .pr-stk {
           font-size: $font-s-lille-p;
           color: $coal;
+          padding-bottom: 5px;
           margin-bottom: 0;
         }
         .vinyl-pris {
@@ -255,6 +266,9 @@ h1 {
           color: $coal;
           font-weight: $font-weight-bold;
           margin-top: 0;
+          @media (min-width: 762px) {
+            font-size: $font-s-h3-web;
+          }
         }
       }
       //Læs mere - description tekst omkring valgte vinyl
@@ -262,7 +276,7 @@ h1 {
         padding-bottom: 30px;
         cursor: pointer;
         p {
-          line-height: 24px;
+          font-size: $font-s-link;
           @media (min-width: 762px) {
             inline-size: 500px;
           }
@@ -313,6 +327,12 @@ h1 {
   //Nederste section med "andre så også", og så 4 vinylprodukter
   .produkt-forslag-section {
     margin-bottom: 100px;
+    h2 {
+      font-size: $font-s-h2-mob;
+      @media (min-width: 1240px) {
+        font-size: $font-s-h2-web;
+      }
+    }
     //Container der holder produkterne
     .produkt-wrapper {
       margin: 0px 0px 100px 0px;

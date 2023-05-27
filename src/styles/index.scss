@@ -142,6 +142,9 @@ p {
       @media (min-width: 762px) {
         margin: 25px 25px 25px 0px;
       }
+      @media (min-width: 1240px) {
+        font-size: $font-s-h1-web;
+      }
     }
     p {
       font-size: $font-s-p;
@@ -171,12 +174,15 @@ p {
   margin-bottom: 50px;
   //overskrift i sektionen
   .heading {
-    margin: 25px;
+    margin: 50px 25px 25px 25px;
     h2 {
       font-size: $font-s-h2-mob;
       color: $coal;
       padding-bottom: 0;
       margin-bottom: 0;
+      @media (min-width: 1240px) {
+        font-size: $font-s-h2-web;
+      }
     }
     p {
       font-size: $font-s-p;
@@ -269,6 +275,9 @@ p {
   color: $offwhite;
   h3 {
     font-size: $font-s-h2-mob;
+    @media (min-width: 1240px) {
+      font-size: $font-s-h2-web;
+    }
   }
 }
 //den første boks' (butik boksen)
@@ -303,6 +312,9 @@ p {
     padding-top: 50px;
     margin: 50px;
     font-size: $font-s-h2-mob;
+    @media (min-width: 1240px) {
+      font-size: $font-s-h2-web;
+    }
   }
 }
 //container der wrapper den enkelte "grund" / kort til at handle her
@@ -324,6 +336,10 @@ p {
     h4 {
       padding-top: 20px;
       padding-bottom: 10px;
+
+      @media (min-width: 1240px) {
+        font-size: $font-s-h3-web;
+      }
     }
     p {
       padding-bottom: 10px;
@@ -368,10 +384,14 @@ p {
   padding-top: 100px;
   margin-bottom: 100px;
 
-  h2 {
+  h1 {
     align-self: left;
     font-size: $font-s-h1-mob;
     color: $offwhite;
+    line-height: 1.21875;
+    @media (min-width: 1240px) {
+      font-size: $font-s-h1-web;
+    }
   }
   .error-message {
     color: $bloodorange;
@@ -445,6 +465,7 @@ p {
       border: 1px solid #ccc;
       border-radius: 4px;
       width: 200px;
+      filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
     }
   }
 }
@@ -508,7 +529,10 @@ p {
     }
     h1 {
       font-size: $font-s-h1-mob;
-      line-height: 31px;
+      line-height: 1.21875;
+      @media (min-width: 1240px) {
+        font-size: $font-s-h1-web;
+      }
     }
     p {
       margin: 25px;
@@ -545,6 +569,12 @@ p {
   .txt {
     padding-top: 50px;
     margin: 25px;
+    h2 {
+      font-size: $font-s-h2-mob;
+      @media (min-width: 1240px) {
+        font-size: $font-s-h2-web;
+      }
+    }
   }
   //container der wrapper de to tilbudsblokke (vinyler, k-pop)
   .tilbud-wrapper {
@@ -610,6 +640,12 @@ p {
   //overskrift
   .heading {
     padding-top: 50px;
+    h2 {
+      font-size: $font-s-h2-mob;
+      @media (min-width: 1240px) {
+        font-size: $font-s-h2-web;
+      }
+    }
     //desktop tilpasning
     @media (min-width: 1240px) {
       margin: 0;
@@ -675,6 +711,8 @@ p {
   h1 {
     margin: 0;
     color: $coal;
+    font-size: $font-s-h1-mob;
+    line-height: 1.21875;
   }
   @media (min-width: 762px) {
     margin: auto;

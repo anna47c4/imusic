@@ -103,6 +103,12 @@
           .group-three,
           .group-four {
             margin-bottom: 10px;
+            display: flex;
+            gap: 3px;
+          }
+          .group-five {
+            display: flex;
+            gap: 3px;
           }
         }
       }
@@ -169,6 +175,8 @@
           }
           .group2 {
             margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
             img {
               width: 15%;
               object-fit: contain;
