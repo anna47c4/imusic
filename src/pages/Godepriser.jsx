@@ -4,6 +4,7 @@ import FastLavPris from "../components/FastLavPris";
 //react imports
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import YoutubeEmbed from "../components/YoutubeEmbed";
 function Godepriser() {
   useEffect(() => {
@@ -22,6 +23,14 @@ function Godepriser() {
   //giver os det indhold, vi viser i vores frontend
   return (
     <>
+      <Helmet>
+        <title>iMusic - Gode priser</title>
+        <meta
+          name="description"
+          content="iMusic er Nordens største musikforhandler med 7.340.000 titler til lave priser · Kæmpe udvalg af ny og kommende materiale · Køb trygt online her"
+        />
+        <meta name="keywords" content="imusic, vinyl, musik, lave priser" />
+      </Helmet>
       <section className="gode-priser-hero">
         <div className="video-fig-wrapper">
           <figcaption className="video-anbefaling">

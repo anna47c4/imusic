@@ -2,6 +2,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 //Vinyldata
 import { VinylDataContext } from "../components/VinylDataContext";
 //Components
@@ -100,6 +101,14 @@ function Vinyler() {
   //indhold vist i vores frontend
   return (
     <>
+      <Helmet>
+        <title>iMusic - Vinylprodukter</title>
+        <meta
+          name="description"
+          content="iMusic er Nordens største musikforhandler med 7.340.000 titler til lave priser · Kæmpe udvalg af ny og kommende materiale · Køb trygt online her"
+        />
+        <meta name="keywords" content="imusic, vinyl, musik, lave priser" />
+      </Helmet>
       <main>
         <h1>Nye & kommende vinyludgivelser</h1>
 

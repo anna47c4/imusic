@@ -1,6 +1,7 @@
 //react imports
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 //component imports
 import UdvalgteKategorier from "../components/UdvalgteKategorier";
 import Button from "../components/Button";
@@ -28,6 +29,14 @@ function Hjem() {
   //får det indhold ud, vi viser i vores frontend
   return (
     <>
+      <Helmet>
+        <title>iMusic - Nordens største udvalg af musik, film og bøger</title>
+        <meta
+          name="description"
+          content="iMusic er Nordens største musikforhandler med 7.340.000 titler til lave priser · Kæmpe udvalg af ny og kommende materiale · Køb trygt online her"
+        />
+        <meta name="keywords" content="imusic, vinyl, musik, lave priser" />
+      </Helmet>
       <section className="hero-section">
         <div className="top-img">
           <img

@@ -2,6 +2,7 @@
 import { useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 //vinyldata import
 import { VinylDataContext } from "../components/VinylDataContext";
 import { CartContext } from "../components/CartContext";
@@ -93,6 +94,14 @@ function VinylSingle() {
   //vi har to forskellige mark ups' an på om det er mobil eller desktop
   return (
     <>
+      <Helmet>
+        <title>iMusic - Vinylprodukt {selectedVinyl.titel}</title>
+        <meta
+          name="description"
+          content="iMusic er Nordens største musikforhandler med 7.340.000 titler til lave priser · Kæmpe udvalg af ny og kommende materiale · Køb trygt online her"
+        />
+        <meta name="keywords" content="imusic, vinyl, musik, lave priser" />
+      </Helmet>
       <main>
         {isDesktop ? (
           /* Desktop-visning */
