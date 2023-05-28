@@ -12,7 +12,7 @@ function UdvalgteKategorier() {
   //herunder har vi forskellige navigates funktioner, som sender brugeren til den klikkede kategoris side
   const navigate = useNavigate();
   function goToVinyler() {
-    navigate("./produkter/vinyler");
+    navigate("../produkter/vinyler");
   }
   function goToCd() {
     navigate("./produkter/cd");
