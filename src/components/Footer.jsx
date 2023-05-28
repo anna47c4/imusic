@@ -51,6 +51,7 @@ function Footer() {
                   href="https://www.instagram.com/imusicdk/?hl=da"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Gå til imusics instagram"
                 >
                   <svg
                     width="40"
@@ -77,6 +78,7 @@ function Footer() {
                   href="https://www.facebook.com/imusic.dk/?locale=da_DK"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Gå til imusics Facebook"
                 >
                   <svg
                     width="40"
@@ -95,6 +97,7 @@ function Footer() {
                   href="https://www.tiktok.com/@imusic.dk"
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Gå til imusics TikTok"
                 >
                   <svg
                     width="35"

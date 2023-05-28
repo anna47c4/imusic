@@ -94,6 +94,7 @@ function RootLayout() {
                   onClick={handleMenuToggle}
                   ref={dropdownAreaRef}
                   className="burger-btn"
+                  name="toggle-menu-button"
                 >
                   {isOpen ? (
                     <svg
