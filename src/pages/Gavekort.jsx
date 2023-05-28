@@ -126,7 +126,7 @@ function GiftCardForm() {
                 {emailError && <p className="error-message">{emailError}</p>}
               </div>
               <Button
-                desc={"KØB GAVEKORT"}
+                desc={"BETAL"}
                 className={"cta-btn"}
                 clickAction={handleSubmit}
                 type="submit"

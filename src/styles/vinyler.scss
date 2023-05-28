@@ -18,12 +18,15 @@ h1 {
   svg {
     padding-left: 2px;
   }
+  button {
+    color: $coal;
+  }
 }
 .filter-btn-wrapper {
   display: flex;
   justify-content: end;
   gap: 6px;
-  margin: 25px;
+  margin: 20px;
 
   @media (min-width: 1240px) {
     margin: 0px;
@@ -36,6 +39,7 @@ h1 {
     border: 0.5px solid black;
     /*    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2); */
     background-color: transparent;
+    color: $coal;
   }
   .active {
     border: 5px solid $bloodorange;
@@ -363,6 +367,7 @@ h1 {
   label,
   button {
     background-color: $offwhite;
+    color: $coal;
   }
 }
 

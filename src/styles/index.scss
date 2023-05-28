@@ -67,6 +67,7 @@ p {
   padding: 10px;
   width: 100%;
   border: 0.5px solid black;
+  border-radius: none;
   /*   margin-bottom: 10px; */
 }
 .search-input:focus {
@@ -78,6 +79,7 @@ p {
   border: 0.5px solid black;
   padding-top: 10px;
   padding-bottom: 10px;
+  color: $coal;
   /*   background-image: url("../assets/svg/search_FILL0_wght400_GRAD0_opsz48.svg");
   background-position: center;
   background-size: cover; */
@@ -240,6 +242,9 @@ p {
     .btn-wrapper {
       margin-top: auto;
       display: flex;
+      button {
+        color: $coal;
+      }
     }
   }
 }
@@ -450,7 +455,10 @@ p {
   display: flex;
   flex-direction: column;
   margin: 25px;
-  padding: 100px;
+  padding: 25px;
+  @media (min-width: 762px) {
+    padding: 50px;
+  }
   background-color: $softsmoke;
   div {
     display: flex;
@@ -645,6 +653,8 @@ p {
     padding-top: 50px;
     h2 {
       font-size: $font-s-h2-mob;
+      color: $coal;
+
       @media (min-width: 1240px) {
         font-size: $font-s-h2-web;
       }
@@ -688,24 +698,12 @@ p {
       }
     }
   }
+  .btn-wrapper {
+    button {
+      color: $coal;
+    }
+  }
 }
-///////
-//video
-/* .video-responsive {
-  overflow: hidden;
-  margin: 25px;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-}
-
-.video-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-} */
 
 //////////////////////////////////////
 //Error page
