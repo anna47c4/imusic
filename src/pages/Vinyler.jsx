@@ -27,6 +27,7 @@ function Vinyler() {
   //her opsætter vi useNavigate i en navigate const, som vi kan bruge til at navigere brugeren et sted hen
   const navigate = useNavigate();
   //Filtrerings states
+  //TEST selectedGenre ændret til SelectedGenres, og sat til tomt array
   const [selectedGenre, setSelectedGenre] = useState("Alle"); //genren starter med at være alle, så alle vinyler vises
   const [showOnlyNyheder, setShowOnlyNyheder] = useState(false); //vis kun nyheder, starter med at være falsk
   const [showOnlyFarvetVinyl, setShowOnlyFarvetVinyl] = useState(false); //vis kun farvede vinyler starter med at være falsk
@@ -34,16 +35,16 @@ function Vinyler() {
 
   //i denne useEffect tjekker vi at vi rent faktisk har dataen før,
   //vi begynder at filtrere på det
-  //TEST MED VINYLDATAS NAVN
+
   useEffect(() => {
     if (vinylData && vinylData.length > 0) {
-      const filteredVinyls = filterVinyls(
+      const filteredData = filterVinyls(
         vinylData,
         selectedGenre,
         showOnlyNyheder,
         showOnlyFarvetVinyl
       );
-      setFilteredVinyls(filteredVinyls);
+      setFilteredVinyls(filteredData);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [vinylData, selectedGenre, showOnlyNyheder, showOnlyFarvetVinyl]);
@@ -51,16 +52,14 @@ function Vinyler() {
   function toggleFilters() {
     setShowFilters(!showFilters);
   }
-  /*  if (genre !== "Alle") {
-      const selectedGenres = genre.split(", ").map((g) => g.trim());
-      all = all.filter((vinyl) => selectedGenres.includes(vinyl.genre));
-    } */
+
   //i denne funktion har vi vores forskellige conditions der tjekker om
   //vinylerne passer med filtreringskravet
-  function filterVinyls(vinyls, genre /* nyheder, farvetVinyl */) {
+
+  function filterVinyls(vinyls, genre) {
     let all = [...vinyls];
 
-    if (genre !== "Alle") {
+    if (selectedGenre !== "Alle") {
       all = all.filter((vinyl) => vinyl.genre === genre);
     }
     if (showOnlyNyheder) {
@@ -69,15 +68,10 @@ function Vinyler() {
     if (showOnlyFarvetVinyl) {
       all = all.filter((vinyl) => vinyl.farve === "Farvet vinyl");
     }
-    /* return vinyls.filter((vinyl) => {
-      if (genre === "Alle" && !nyheder && !farvetVinyl) return true;
-      if (nyheder && !vinyl.nyhed) return false;
-      if (farvetVinyl && vinyl.farve !== "Farvet vinyl") return false;
-      if (genre !== "Alle" && vinyl.genre !== genre) return false;
-      return true;
-    }); */
+
     return all;
   }
+
   //her har vi en funktion der sender brugeren til forsiden
   function goToHome() {
     navigate("/");
@@ -155,17 +149,6 @@ function Vinyler() {
                 desc="ALLE"
               />
 
-              {/*    {vinylData.map((vinyl) => (
-                <Button
-                  key={vinyl.id}
-                  className={`${
-                    selectedGenres.includes(vinyl.genres) ? "selected" : ""
-                  }`}
-                  clickAction={() => handleGenreSelection(vinyl.genres)}
-                  desc={vinyl.genres}
-                />
-              ))} */}
-
               <Button
                 className={`${selectedGenre === "Rock" ? "active" : ""}`}
                 clickAction={() => handleGenreFilter("Rock")}
@@ -219,7 +202,8 @@ function Vinyler() {
         </div>
 
         <div className="vinyl-wrapper">
-          {filteredVinyls.length === 0 ? (
+          {/*  {filteredVinyls.length === 0 ? ( */}
+          {Array.isArray(filteredVinyls) && filteredVinyls.length === 0 ? (
             <p>Der er ingen plader der matcher dine filtre</p>
           ) : null}
           {filteredVinyls.map((vinyl) => (
