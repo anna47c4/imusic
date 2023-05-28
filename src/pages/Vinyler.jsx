@@ -31,7 +31,8 @@ function Vinyler() {
   //TEST selectedGenre ændret til SelectedGenres, og sat til tomt array
   const [selectedGenre, setSelectedGenre] = useState("Alle"); //genren starter med at være alle, så alle vinyler vises
   const [showOnlyNyheder, setShowOnlyNyheder] = useState(false); //vis kun nyheder, starter med at være falsk
-  const [showOnlyFarvetVinyl, setShowOnlyFarvetVinyl] = useState(false); //vis kun farvede vinyler starter med at være falsk
+  const [showOnlyFarvetVinyl, setShowOnlyFarvetVinyl] = useState(false);
+  const [showOnlyLimitedVinyl, setShowOnlyLimitedVinyl] = useState(false); //vis kun farvede vinyler starter med at være falsk
   /*   const [isFiltering, setIsFiltering] = useState(false); */ //state der skal undersøge, hvorvidt der foregår en filtrering eller ej
 
   //i denne useEffect tjekker vi at vi rent faktisk har dataen før,
@@ -43,12 +44,19 @@ function Vinyler() {
         vinylData,
         selectedGenre,
         showOnlyNyheder,
-        showOnlyFarvetVinyl
+        showOnlyFarvetVinyl,
+        showOnlyLimitedVinyl
       );
       setFilteredVinyls(filteredData);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [vinylData, selectedGenre, showOnlyNyheder, showOnlyFarvetVinyl]);
+  }, [
+    vinylData,
+    selectedGenre,
+    showOnlyNyheder,
+    showOnlyFarvetVinyl,
+    showOnlyLimitedVinyl,
+  ]);
 
   function toggleFilters() {
     setShowFilters(!showFilters);
@@ -68,6 +76,9 @@ function Vinyler() {
     }
     if (showOnlyFarvetVinyl) {
       all = all.filter((vinyl) => vinyl.farve === "Farvet vinyl");
+    }
+    if (showOnlyLimitedVinyl) {
+      all = all.filter((vinyl) => vinyl.edition === "Limited edition");
     }
 
     return all;
@@ -95,6 +106,11 @@ function Vinyler() {
   function handleFarvetVinylFilter() {
     setShowOnlyFarvetVinyl(
       (prevShowOnlyFarvetVinyl) => !prevShowOnlyFarvetVinyl
+    );
+  }
+  function handleLimitedVinylFilter() {
+    setShowOnlyLimitedVinyl(
+      (prevShowOnlyLimitedVinyl) => !prevShowOnlyLimitedVinyl
     );
   }
   //her har vi vores return statement, hvor vi får det korrekte
@@ -204,7 +220,12 @@ function Vinyler() {
               <Button
                 className={showOnlyFarvetVinyl ? "active" : ""}
                 clickAction={handleFarvetVinylFilter}
-                desc="FARVET VINYL"
+                desc="FARVET UDG."
+              />
+              <Button
+                className={showOnlyLimitedVinyl ? "active" : ""}
+                clickAction={handleLimitedVinylFilter}
+                desc="LIMITED UDG."
               />
             </div>
           )}

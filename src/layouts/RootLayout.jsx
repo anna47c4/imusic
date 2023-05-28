@@ -6,6 +6,7 @@ import TopNav from "../components/TopNav";
 import CenterNav from "../components/CenterNav";
 import Footer from "../components/Footer";
 import VinylSearch from "../components/VinylSearch";
+import ScrollToTopBtn from "../components/ScrollToTopBtn";
 function RootLayout() {
   //Denne funktion er vores Root layout, det vi vil have skal
   //gælde på alle sider. Her styrer vi også
@@ -75,6 +76,7 @@ function RootLayout() {
   return (
     <>
       <div className="root-layout">
+        <ScrollToTopBtn></ScrollToTopBtn>
         <header>
           {isDesktop ? (
             /* Desktop-visning */
