@@ -78,18 +78,18 @@
         .group1 {
           margin-bottom: 50px;
           img {
-            width: 30%;
+            width: 20%;
             object-fit: contain;
             margin-right: 5px;
           }
           .group-one img {
             margin-bottom: 6px;
-            width: 40%;
+            width: 30%;
           }
           .group-two {
             margin-bottom: 15px;
             .boghandel {
-              width: 20%;
+              width: 15%;
               margin-right: 0;
             }
           }
@@ -97,7 +97,7 @@
         .group2 {
           margin-bottom: 50px;
           img {
-            width: 20%;
+            width: 10%;
             object-fit: contain;
           }
           .group-three,
@@ -130,7 +130,7 @@
 }
 
 /* DESKTOP FOOTER STYLING */
-@media (min-width: 762px) {
+@media (min-width: 1240px) {
   .footer-wrapper {
     footer {
       .row-one {
