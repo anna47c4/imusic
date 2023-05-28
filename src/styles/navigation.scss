@@ -176,6 +176,7 @@
     .center-nav-logo {
       .sort-logo {
         width: 50%;
+        cursor: pointer;
       }
     }
   }
@@ -207,6 +208,7 @@
     color: $coal;
     font-style: $font-style-italic;
     font-size: $font-s-p;
+    cursor: pointer;
   }
   .krumme:hover {
     color: $bloodorange;

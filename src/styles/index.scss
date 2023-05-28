@@ -22,11 +22,13 @@ main {
 a {
   text-decoration: none;
   color: $coal;
+  cursor: pointer;
 }
 button {
   border: none;
   font-size: $font-s-btn-txt;
   font-family: $font-family;
+  cursor: pointer;
 }
 p {
   line-height: 1.5;

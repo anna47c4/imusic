@@ -29,6 +29,7 @@
     //some del af footeren med logoer
     .some {
       margin-bottom: 50px;
+      cursor: pointer;
       //"SoMe"
       p {
         color: $offwhite;
@@ -71,6 +72,7 @@
     .hvidt-logo {
       margin-bottom: 50px;
       width: 40%;
+      cursor: pointer;
     }
     //forskellige ikoner / logoer "stempler"
     .row-two {
