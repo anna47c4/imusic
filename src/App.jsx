@@ -24,7 +24,7 @@ import Nav from "./components/Nav";
 import Vinyler from "./pages/Vinyler";
 import { CartContext, CartContextProvider } from "./components/CartContext";
 //import af databse fil fra module mappe
-import { getData } from "./modules/db.js";
+import { getData } from "./modules/db";
 import {
   VinylDataContext,
   /*   VinylDataContextProvider */
