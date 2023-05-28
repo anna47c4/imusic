@@ -16,7 +16,7 @@ import {
 
 // Import af komponenter og sider
 import Gavekort from "./pages/Gavekort";
-import Godepriser from "./pages/GodePriser";
+import Godepriser from "./pages/Godepriser";
 import Hjem from "./pages/Hjem";
 import ErrorPage from "./pages/ErrorPage";
 import RootLayout from "./layouts/RootLayout";
