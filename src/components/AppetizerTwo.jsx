@@ -21,11 +21,13 @@ function AppetizerTwo() {
       <div className="store-txt-wrapper background2">
         <div className="store-txt">
           <h3>
-            Drømmer du om at samle på vinyler, men mangler en pladespiller?
+            Del dine øjeblikke og skab minder med vennerne når pladespilleren
+            fylder rummet med nostalgiske toner, og atmosfærisk musik.
           </h3>
           <p>
-            Her finder du et bredt udvalg af pladespillere der sørger for, at du
-            kan få den autentiske lyd fra vinylen ind i din stue.
+            Her finder du vores store udvalg af pladespillere. Med en
+            pladespiller kan du få den autentiske og nostalgiske lyd fra
+            musikken hjem i stuen.
           </p>
           <div className="store-btn">
             <Button

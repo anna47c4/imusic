@@ -22,8 +22,9 @@ function AppetizerOne() {
             der vil begejstre din musiksmag
           </h3>
           <p>
-            Se vores brede udvalg af vinyler. Vi har alt hvad hjertet begærer
-            til din samling.
+            Se vores brede udvalg af vinyler, her er du sikker på at kunne finde
+            både nye og populære titler, sjældne udgivelser, og nichegenrer til
+            dig der samler.
           </p>
 
           <div className="store-btn">

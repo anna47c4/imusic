@@ -39,7 +39,6 @@ function Footer() {
               <p>Faq</p>
               <p>Handelsbetingelser</p>
               <p>Cookie- & privatlivspolitik</p>
-              <p>Gavekort</p>
               <p>Om os</p>
               <p>Kontakt</p>
               <p>Butikken</p>
