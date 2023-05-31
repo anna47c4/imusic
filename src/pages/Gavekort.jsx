@@ -5,10 +5,12 @@ import { Helmet } from "react-helmet";
 import Button from "../components/Button";
 
 function GiftCardForm() {
+  //sørger for at scrolle vinduet til top når siden indlæses
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  //states der håndterer vores form
   const [amount, setAmount] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -21,7 +23,7 @@ function GiftCardForm() {
     e.preventDefault();
 
     let isValid = true;
-
+    //form control og error messages
     if (!amount) {
       setAmountError("Gavekortbeløb er påkrævet");
       isValid = false;
@@ -42,7 +44,7 @@ function GiftCardForm() {
     } else {
       setEmailError("");
     }
-
+    //console log af form data
     if (isValid) {
       console.log(
         "Gavekort beløb:",
@@ -72,7 +74,7 @@ function GiftCardForm() {
         <meta name="keywords" content="imusic, vinyl, musik, lave priser" />
       </Helmet>
 
-      <div>
+      <div className="gift-card-container">
         {isSubmitted ? (
           <div className="feedback-message">
             <p>

@@ -19,16 +19,16 @@ function VinylSingle() {
   const [visLæsMere, setVisLæsMere] = useState(false); //starter som false, fordi vi ikke vil have teksten vist før brugeren klikker
   //state der detecter om skærmen er desktop eller ikke, og det bruger vi senere i vores return statement til at afgøre, hvilken html struktur vi vil have vist
   const [isDesktop, setIsDesktop] = useState(false);
-  //basket test
-
-  /*   const { isInCart, addToCart } = useContext(CartContext); */
+  //context der deler kurvens tilstand mellem komponenter
   const cartContext = useContext(CartContext);
   const { isInCart, addToCart } = cartContext || {};
   console.log({ cartContext });
+
+  //check ting da jeg skulle se om det virkede
   const handleAddToCart = () => {
     console.log("handleAddToCart blev kaldt");
     if (addToCart) {
-      addToCart(); // Kald addToCart-funktionen fra CartContext
+      addToCart();
     }
   };
 
@@ -72,11 +72,11 @@ function VinylSingle() {
   // her finder vi det specifikke vinylprodukt baseret på id'et
   const selectedVinyl = vinylData.find((vinyl) => vinyl.id === parseInt(id));
 
-  // Håndter tilfælde hvor det specifikke vinylprodukt ikke findes
+  // Håndter tilfælde hvor den specifikke vinyl ikke kan hentes, eller ikke findes
   if (!selectedVinyl) {
     return <div>Vinylproduktet blev ikke fundet.</div>;
   }
-  // Opdel trackliste i et array af sange
+  // Opdel trackliste i et array formatteret som vi ønsker
   const songs = selectedVinyl.trackliste.split(","); //  sange er adskilt af komma
   // Tilføj linjeskift efter hver sang i tracklisten
   const formattedSongs = songs.map((song) => (

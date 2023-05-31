@@ -3,7 +3,7 @@ import Button from "./Button";
 //react import
 import { useNavigate } from "react-router-dom";
 //asset import
-import butikBillede from "../assets/img/butik.webp";
+
 function AppetizerOne() {
   //navigate function, vi kobler på vores cta btn
   const navigate = useNavigate();
@@ -12,9 +12,7 @@ function AppetizerOne() {
   }
   return (
     <>
-      <div className="store-img">
-        <img src={butikBillede} alt="Billede fra imusics butik i Risskov" />{" "}
-      </div>
+      <div className="store-img butik-img"></div>
       <div className="store-txt-wrapper background1">
         <div className="store-txt">
           <h3>

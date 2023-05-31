@@ -28,16 +28,13 @@ function Vinyler() {
   //her opsætter vi useNavigate i en navigate const, som vi kan bruge til at navigere brugeren et sted hen
   const navigate = useNavigate();
   //Filtrerings states
-  //TEST selectedGenre ændret til SelectedGenres, og sat til tomt array
   const [selectedGenre, setSelectedGenre] = useState("Alle"); //genren starter med at være alle, så alle vinyler vises
   const [showOnlyNyheder, setShowOnlyNyheder] = useState(false); //vis kun nyheder, starter med at være falsk
   const [showOnlyFarvetVinyl, setShowOnlyFarvetVinyl] = useState(false);
   const [showOnlyLimitedVinyl, setShowOnlyLimitedVinyl] = useState(false); //vis kun farvede vinyler starter med at være falsk
-  /*   const [isFiltering, setIsFiltering] = useState(false); */ //state der skal undersøge, hvorvidt der foregår en filtrering eller ej
 
   //i denne useEffect tjekker vi at vi rent faktisk har dataen før,
   //vi begynder at filtrere på det
-
   useEffect(() => {
     if (vinylData && vinylData.length > 0) {
       const filteredData = filterVinyls(
@@ -64,7 +61,6 @@ function Vinyler() {
 
   //i denne funktion har vi vores forskellige conditions der tjekker om
   //vinylerne passer med filtreringskravet
-
   function filterVinyls(vinyls, genre) {
     let all = [...vinyls];
 

@@ -2,8 +2,7 @@
 import Button from "./Button";
 //react import
 import { useNavigate } from "react-router-dom";
-//asset import
-import pladeSpiller from "../assets/img/pladespiller.webp";
+
 function AppetizerTwo() {
   //navigate function, vi kobler på vores cta btn
   const navigate = useNavigate();
@@ -12,12 +11,7 @@ function AppetizerTwo() {
   }
   return (
     <>
-      <div className="store-img">
-        <img
-          src={pladeSpiller}
-          alt="Billede af en pladespiller, orange farver"
-        />
-      </div>
+      <div className="store-img pladespiller-img"></div>
       <div className="store-txt-wrapper background2">
         <div className="store-txt">
           <h3>

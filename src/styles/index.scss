@@ -266,9 +266,31 @@ p {
 /* APPETIZER SECTIONS (de to sektioner, hvor den ene leder til vinyler, og den anden leder til pladespillere) */
 //billedet fra butikken (og af pladespilleren selvom det ikke er fra butikken)
 .store-img {
-  background-color: $coal;
+  margin: 0;
+  padding: 0;
   img {
     width: 100%;
+    object-fit: cover;
+  }
+}
+//højre kolonne med butiks billedet (sat som baggrund for at fylde hele boksen ud)
+.butik-img {
+  background-image: url("../assets/img/butik.webp");
+  background-size: cover;
+  background-position: center;
+  height: 375px;
+  @media (min-width: 762px) {
+    height: auto;
+  }
+}
+//venstre kolonne med pladespiller billedet (sat som baggrund for at fylde hele boksen ud)
+.pladespiller-img {
+  background-image: url("../assets/img/pladespiller.webp");
+  background-size: cover;
+  background-position: center;
+  height: 375px;
+  @media (min-width: 762px) {
+    height: auto;
   }
 }
 //tekst container (og den samme container som classerne nedenunder er tilkoblet)
@@ -400,22 +422,22 @@ p {
 .gift-card-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-image: url(../assets/svg/soundwave_1920X1080.svg);
   background-size: cover;
   background-position: center;
-  padding-bottom: 100px;
-  padding-top: 100px;
+  padding-bottom: 50px;
+  padding-top: 50px;
   margin-bottom: 100px;
 
   h1 {
-    align-self: left;
     font-size: $font-s-h1-mob;
     color: $offwhite;
     line-height: 1.21875;
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.35);
+
     @media (min-width: 1240px) {
       font-size: $font-s-h1-web;
+      margin-left: 25px;
     }
   }
   .error-message {
@@ -475,6 +497,7 @@ p {
   margin: 25px;
   padding: 25px;
   @media (min-width: 762px) {
+    max-width: 600px;
     padding: 50px;
   }
   background-color: $softsmoke;
@@ -489,11 +512,14 @@ p {
       color: $coal;
     }
     input {
+      -webkit-appearance: none;
       padding: 8px;
       border: 1px solid #ccc;
       border-radius: 4px;
-      width: 200px;
       filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+    }
+    input:focus {
+      outline: 1px solid $bloodorange;
     }
   }
 }
